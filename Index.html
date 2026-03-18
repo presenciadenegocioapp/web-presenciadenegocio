@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ================================================== -->
+  <!-- === SEO BÁSICO === -->
+  <!-- ================================================== -->
+  <title>Presencia de Negocio | Webs profesionales para negocios locales</title>
+  <meta
+    name="description"
+    content="Creamos webs profesionales para negocios locales de forma rápida, clara y sin complicaciones. Precios transparentes, primer mes incluido y estructura pensada para convertir."
+  />
+
+  <style>
+    /* ================================================== */
+    /* === SECCIÓN CSS === */
+    /* ================================================== */
+
+
+    /* ================================================== */
+    /* === Color de fondo === */
+    /* ================================================== */
+    :root {
+      --color-fondo-principal: #ffffff;
+      --color-fondo-secundario: #f6f8fb;
+      --color-fondo-terciario: #eef3ff;
+      --color-fondo-oscuro: #0b1220;
+      --color-fondo-card: rgba(255, 255, 255, 0.9);
+      --color-fondo-card-oscura: #111827;
+      --color-fondo-destacado: #2563eb;
+      --color-fondo-destacado-hover: #1d4ed8;
+      --color-fondo-acento: #7c3aed;
+      --color-fondo-borde-suave: #e5e7eb;
+      --color-fondo-borde-fuerte: #cfd8e3;
+    }
+
+
+    /* ================================================== */
+    /* === Color de letras === */
+    /* ================================================== */
+    :root {
+      --color-texto-principal: #111827;
+      --color-texto-secundario: #4b5563;
+      --color-texto-suave: #6b7280;
+      --color-texto-claro: #cbd5e1;
+      --color-texto-blanco: #ffffff;
+      --color-texto-destacado: #2563eb;
+      --color-texto-acento: #7c3aed;
+      --color-texto-oscuro: #0b1220;
+    }
+
+
+    /* ================================================== */
+    /* === Seccion Inicio 1 === */
+    /* === Reset y base general === */
+    /* ================================================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(124, 58, 237, 0.08), transparent 24%),
+        var(--color-fondo-principal);
+      color: var(--color-texto-principal);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-texto-destacado);
+      margin-bottom: 12px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background-color: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .section-title {
+      max-width: 780px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .section-title h2 {
+      font-size: 2.35rem;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      color: var(--color-texto-oscuro);
+    }
+
+    .section-title p {
+      color: var(--color-texto-secundario);
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--color-fondo-destacado), var(--color-fondo-acento));
+      color: var(--color-texto-blanco);
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(37, 99, 235, 0.22);
+    }
+
+    .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: var(--color-texto-principal);
+      border: 1px solid var(--color-fondo-borde-suave);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--color-fondo-principal);
+      transform: translateY(-1px);
+    }
+
+    .card-glass {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    }
+
+
+    /* ================================================== */
+    /* === Seccion Inicio 2 === */
+    /* === Header / navegación === */
+    /* ================================================== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.7);
+    }
+
+    .header-container {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--color-texto-oscuro);
+      white-space: nowrap;
+    }
+
+    .logo span {
+      background: linear-gradient(135deg, var(--color-texto-destacado), var(--color-texto-acento));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav a {
+      font-size: 0.95rem;
+      color: var(--color-texto-principal);
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: var(--color-texto-destacado);
+    }
+
+    .header-cta {
+      background-color: var(--color-fondo-oscuro);
+      color: var(--color-texto-blanco);
+      box-shadow: 0 8px 24px rgba(11, 18, 32, 0.16);
+    }
+
+    .header-cta:hover {
+      transform: translateY(-1px);
+    }
+
+
+    /* ================================================== */
+    /* === Seccion Inicio 3 === */
+    /* === Hero principal === */
+    /* ================================================== */
+    .hero {
+      padding: 96px 0 76px;
+    }
+
+    .hero-container {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 42px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--color-texto-destacado);
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background-color: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.14);
+    }
+
+    .hero h1 {
+      font-size: 3.45rem;
+      line-height: 1.04;
+      margin-bottom: 18px;
+      color: var(--color-texto-oscuro);
+      letter-spacing: -1.4px;
+    }
+
+    .hero-description {
+      font-size: 1.08rem;
+      color: var(--color-texto-secundario);
+      max-width: 690px;
+      margin-bottom: 26px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-features li {
+      color: var(--color-texto-secundario);
+      font-size: 0.93rem;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background-color: rgba(255, 255, 255, 0.75);
+      border: 1px solid var(--color-fondo-borde-suave);
+    }
+
+    .hero-card {
+      padding: 30px;
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.14), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(124, 58, 237, 0.12), transparent 28%);
+      pointer-events: none;
+    }
+
+    .hero-card-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-card-small {
+      color: var(--color-texto-secundario);
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-card h2 {
+      font-size: 3.15rem;
+      line-height: 1;
+      margin-bottom: 10px;
+      color: var(--color-texto-oscuro);
+      letter-spacing: -1px;
+    }
+
+    .hero-card-price-text {
+      color: var(--color-texto-secundario);
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .hero-card-divider {
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-fondo-borde-suave);
+      margin: 18px 0;
+    }
+
+    .hero-card-list-title {
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--color-texto-oscuro);
+    }
+
+    .hero-card ul li {
+      margin-bottom: 10px;
+      color: var(--color-texto-secundario);
+      font-size: 0.96rem;
+    }
+
+
+    /* ================================================== */
+    /* === Seccion Inicio 4 === */
+    /* === Problema / dolor === */
+    /* ================================================== */
+    .problema {
+      padding: 84px 0;
+      background-color: var(--color-fondo-secundario);
+    }
+
+    .problema-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .problema-card {
+      background-color: var(--color-fondo-card);
+      border: 1px solid var(--color-fondo-borde-suave);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
+    }
+
+    .problema-card h3 {
+      font-size: 1.16rem;
+      margin-bottom: 10px;
+      color: var(--color-texto-oscuro);
+    }
+
+    .problema-card p {
+      color: var(--color-texto-secundario);
+      font-size: 0.97rem;
+    }
+
+
+    /* ================================================== */
+    /* === Seccion Inicio 5 === */
+    /* === Ideas para negocios === */
+    /* ================================================== */
+    .sectores {
+      padding: 84px 0;
+      background-color: var(--color-fondo-principal);
+    }
+
+    .sectores-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .sector-card {
+      background-color: var(--color-fondo-card);
+      border: 1px solid var(--color-fondo-borde-suave);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
+    }
+
+    .sector-card h3 {
+      font-size: 1.16rem;
+      margin-bottom: 10px;
+      color: var(--color-texto-oscuro);
+    }
+
+    .sector-card p {
+      color: var(--color-texto-secundario);
+      font-size: 0.97rem;
+    }
+
+
+    /* ================================================== */
+    /* === Seccion Inicio 6 === */
+    /* === Qué incluye === */
+    /* ================================================== */
+    .incluye {
+      padding: 84px 0;
+      background-color: var(--color-fondo-secundario);
+    }
+
+    .incluye-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .incluye-card {
+      background-color: var(--color-fondo-card);
+      border: 1px solid var(--color-fondo-borde-suave);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
+    }
+
+    .incluye-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.08rem;
+      color: var(--color-texto-oscuro);
+    }
+
+    .incluye-card p {
+      color: var(--color-texto-secundario);
+      font-size: 0.97rem;
+    }
+
+
+    /* ================================================== */
+    /* === Seccion Inicio 7 === */
+    /* === Cómo funciona === */
+    /* ================================================== */
+    .como-funciona {
+      padding: 84px 0;
+      background-color: var(--color-fondo-principal);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step-card {
+      background-color: var(--color-fondo-card);
+      border: 1px solid var(--color-fondo-borde-suave);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
+    }
+
+    .step-card span {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--color-texto-blanco);
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, var(--color-fondo-destacado), var(--color-fondo-acento));
+    }
+
+    .step-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.08rem;
+      color: var(--color-texto-oscuro);
+    }
+
+    .step-card p {
+      color: var(--color-texto-secundario);
+      font-size: 0.97rem;
+    }
+
+
+    /* ================================================== */
+    /* === Seccion Inicio 8 === */
+    /* === Planes === */
+    /* ================================================== */
+    .planes {
+      padding: 84px 0;
+      background-color: var(--color-fondo-secundario);
+    }
+
+    .planes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .plan-card {
+      background-color: var(--color-fondo-card);
+      border: 1px solid var(--color-fondo-borde-suave);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.05);
+      min-width: 0;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plan-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(37, 99, 235, 0.03), transparent 26%);
+      pointer-events: none;
+    }
+
+    .plan-card.featured {
+      border: 2px solid rgba(37, 99, 235, 0.32);
+      transform: translateY(-6px);
+      box-shadow: 0 22px 44px rgba(37, 99, 235, 0.10);
+    }
+
+    .plan-card.featured::after {
+      content: "Recomendado";
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--color-texto-blanco);
+      background: linear-gradient(135deg, var(--color-fondo-destacado), var(--color-fondo-acento));
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+
+    .plan-name {
+      color: var(--color-texto-destacado);
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 0.84rem;
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .plan-card h3 {
+      font-size: 2.2rem;
+      line-height: 1;
+      margin-bottom: 10px;
+      color: var(--color-texto-oscuro);
+      letter-spacing: -0.8px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .plan-month {
+      color: var(--color-texto-secundario);
+      margin-bottom: 8px;
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+    }
+
+    .plan-first-payment {
+      color: var(--color-texto-suave);
+      font-size: 0.93rem;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .plan-card ul {
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+      flex-grow: 1;
+    }
+
+    .plan-card ul li {
+      margin-bottom: 10px;
+      color: var(--color-texto-secundario);
+      font-size: 0.95rem;
+    }
+
+    .btn-plan {
+      width: 100%;
+      text-align: center;
+      background-color: var(--color-fondo-oscuro);
+      color: var(--color-texto-blanco);
+      position: relative;
+      z-index: 2;
+      margin-top: auto;
+    }
+
+    .btn-plan:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(11, 18, 32, 0.16);
+    }
+
+
+    /* ================================================== */
+    /* === Seccion Inicio 9 === */
+    /* === CTA grande === */
+    /* ================================================== */
+    .cta {
+      padding: 86px 0;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.18), transparent 26%),
+        var(--color-fondo-oscuro);
+      color: var(--color-texto-blanco);
+    }
+
+    .cta-container {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .cta h2 {
+      font-size: 2.45rem;
+      line-height: 1.12;
+      margin-bottom: 16px;
+      letter-spacing: -0.8px;
+    }
+
+    .cta p {
+      color: var(--color-texto-claro);
+      font-size: 1.02rem;
+      margin-bottom: 24px;
+    }
+
+
+    /* ================================================== */
+    /* === Seccion Inicio 10 === */
+    /* === Contacto === */
+    /* ================================================== */
+    .contacto {
+      padding: 84px 0;
+      background-color: var(--color-fondo-principal);
+    }
+
+    .contacto-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .contacto-text h2 {
+      font-size: 2.1rem;
+      line-height: 1.12;
+      margin-bottom: 14px;
+      color: var(--color-texto-oscuro);
+    }
+
+    .contacto-text p {
+      color: var(--color-texto-secundario);
+      max-width: 520px;
+    }
+
+    .contacto-form {
+      background-color: var(--color-fondo-card);
+      border: 1px solid var(--color-fondo-borde-suave);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.05);
+    }
+
+    .contacto-form input,
+    .contacto-form textarea {
+      width: 100%;
+      border: 1px solid var(--color-fondo-borde-fuerte);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      font-size: 0.96rem;
+      font-family: inherit;
+      color: var(--color-texto-principal);
+      background-color: rgba(255, 255, 255, 0.92);
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    .contacto-form input:focus,
+    .contacto-form textarea:focus {
+      border-color: rgba(37, 99, 235, 0.45);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+    }
+
+    .contacto-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .contacto-form button {
+      width: 100%;
+    }
+
+
+    /* ================================================== */
+    /* === Seccion Inicio 11 === */
+    /* === Footer === */
+    /* ================================================== */
+    .footer {
+      background-color: var(--color-fondo-oscuro);
+      color: var(--color-texto-blanco);
+      padding: 36px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .footer-logo {
+      font-size: 1.15rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .footer-text {
+      max-width: 430px;
+      color: var(--color-texto-claro);
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: var(--color-texto-claro);
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-texto-blanco);
+    }
+
+
+    /* ================================================== */
+    /* === Seccion Inicio 12 === */
+    /* === Responsive / móvil === */
+    /* ================================================== */
+    @media (max-width: 1000px) {
+      .hero-container,
+      .contacto-container {
+        grid-template-columns: 1fr;
+      }
+
+      .problema-grid,
+      .incluye-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 2.7rem;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav,
+      .header-cta {
+        display: none;
+      }
+
+      .section-title h2,
+      .contacto-text h2,
+      .cta h2 {
+        font-size: 1.82rem;
+      }
+
+      .hero h1 {
+        font-size: 2.14rem;
+        letter-spacing: -1px;
+      }
+
+      .problema-grid,
+      .incluye-grid,
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sectores-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .planes-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .plan-card {
+        padding: 14px;
+        border-radius: 18px;
+      }
+
+      .plan-card.featured {
+        transform: translateY(-3px);
+      }
+
+      .plan-card.featured::after {
+        top: 8px;
+        right: 8px;
+        font-size: 0.58rem;
+        padding: 5px 7px;
+      }
+
+      .plan-card h3 {
+        font-size: 1.34rem;
+      }
+
+      .plan-name {
+        font-size: 0.7rem;
+      }
+
+      .plan-month,
+      .plan-first-payment,
+      .plan-card ul li {
+        font-size: 0.79rem;
+      }
+
+      .btn-plan {
+        padding: 11px 8px;
+        font-size: 0.8rem;
+      }
+
+      .footer-container {
+        flex-direction: column;
+      }
+
+      .hero {
+        padding: 72px 0 54px;
+      }
+
+      .problema,
+      .sectores,
+      .incluye,
+      .como-funciona,
+      .planes,
+      .cta,
+      .contacto {
+        padding: 62px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================================================== -->
+  <!-- === HEADER === -->
+  <!-- ================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo">Presencia<span>DeNegocio</span></a>
+
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#planes">Planes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a href="#contacto" class="btn header-cta">Solicitar información</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================================================== -->
+    <!-- === HERO ULTRA DIRECTO === -->
+    <!-- ================================================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero-container">
+
+        <div class="hero-text">
+          <p class="hero-tag">Para negocios sin web o con una web desactualizada</p>
+
+          <h1>
+            Si tu negocio no tiene web o la que tienes no transmite confianza, esto es para ti
+          </h1>
+
+          <p class="hero-description">
+            Creamos webs claras, profesionales y listas para funcionar sin complicaciones,
+            con precios transparentes y todo explicado desde el principio.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#planes" class="btn btn-primary">Ver planes</a>
+            <a href="#contacto" class="btn btn-secondary">Solicitar información</a>
+          </div>
+
+          <ul class="hero-features">
+            <li>Sin letra pequeña</li>
+            <li>Primer mes incluido</li>
+            <li>Web lista sin complicaciones</li>
+          </ul>
+        </div>
+
+        <div class="hero-card card-glass">
+          <div class="hero-card-content">
+            <p class="hero-card-small">Empieza desde</p>
+            <h2>99€</h2>
+            <p class="hero-card-price-text">El primer pago ya incluye el primer mes</p>
+
+            <div class="hero-card-divider"></div>
+
+            <p class="hero-card-list-title">Incluye:</p>
+            <ul>
+              <li>✔ 3 páginas en total</li>
+              <li>✔ 1 página legal obligatoria</li>
+              <li>✔ Las otras 2 las eliges tú</li>
+              <li>✔ Web clara y profesional</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- === PROBLEMA === -->
+    <!-- ================================================== -->
+    <section class="problema">
+      <div class="container">
+        <div class="section-title">
+          <h2>Muchos negocios pierden clientes por una cosa muy simple</h2>
+          <p>
+            Hoy en día, si alguien busca tu negocio y no ve una web clara, la confianza baja
+            y las posibilidades de contacto también.
+          </p>
+        </div>
+
+        <div class="problema-grid">
+          <div class="problema-card">
+            <h3>No tienen web</h3>
+            <p>La gente busca información, no encuentra nada y termina yéndose a otro sitio.</p>
+          </div>
+
+          <div class="problema-card">
+            <h3>Tienen una web que no ayuda</h3>
+            <p>Se ve antigua, no explica bien el negocio o transmite poca confianza.</p>
+          </div>
+
+          <div class="problema-card">
+            <h3>No dejan claro lo que ofrecen</h3>
+            <p>Si el cliente no entiende rápido lo que haces, es más fácil que no te contacte.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- === IDEAS PARA NEGOCIOS === -->
+    <!-- ================================================== -->
+    <section class="sectores" id="sectores">
+      <div class="container">
+        <div class="section-title">
+          <p class="section-tag">Ideas para negocios</p>
+          <h2>Ideal para sectores donde una buena web marca la diferencia</h2>
+          <p>
+            Este servicio encaja especialmente bien con negocios locales que necesitan
+            mejorar su imagen, explicar mejor lo que hacen y facilitar el contacto.
+          </p>
+        </div>
+
+        <div class="sectores-grid">
+          <div class="sector-card">
+            <h3>Belleza y estética</h3>
+            <p>Peluquerías, centros de estética, barberías, uñas, pestañas y negocios similares.</p>
+          </div>
+
+          <div class="sector-card">
+            <h3>Mascotas</h3>
+            <p>Veterinarios, peluquerías caninas, guarderías, adiestradores y otros servicios.</p>
+          </div>
+
+          <div class="sector-card">
+            <h3>Bienestar y deporte</h3>
+            <p>Yoga, pilates, danza, artes marciales, pádel, escalada y más.</p>
+          </div>
+
+          <div class="sector-card">
+            <h3>Servicios independientes</h3>
+            <p>Fisioterapia, nutrición, masajes, fotografía y otros profesionales.</p>
+          </div>
+
+          <div class="sector-card">
+            <h3>Comercio y servicios locales</h3>
+            <p>Cerrajeros, electricistas, floristerías, lavanderías y negocios del día a día.</p>
+          </div>
+
+          <div class="sector-card">
+            <h3>Y muchos más</h3>
+            <p>Si tu negocio necesita una web clara y profesional, este servicio puede encajar contigo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- === QUÉ INCLUYE === -->
+    <!-- ================================================== -->
+    <section class="incluye">
+      <div class="container">
+        <div class="section-title">
+          <p class="section-tag">Qué incluye</p>
+          <h2>Una base profesional, sencilla y pensada para funcionar</h2>
+          <p>
+            Nuestro servicio está pensado para que cualquier negocio pueda tener una web clara,
+            útil y con una estructura fácil de entender.
+          </p>
+        </div>
+
+        <div class="incluye-grid">
+          <div class="incluye-card">
+            <h3>3 páginas incluidas</h3>
+            <p>Una página legal obligatoria y otras dos a elegir según lo que mejor le convenga al negocio.</p>
+          </div>
+
+          <div class="incluye-card">
+            <h3>Estructura clara</h3>
+            <p>Organizamos la información de forma simple para que tus clientes entiendan rápido lo que haces.</p>
+          </div>
+
+          <div class="incluye-card">
+            <h3>Imagen profesional</h3>
+            <p>Diseño limpio y cuidado para transmitir confianza desde el primer vistazo.</p>
+          </div>
+
+          <div class="incluye-card">
+            <h3>Publicación de la web</h3>
+            <p>Dejamos la página preparada para estar online y representar bien a tu negocio.</p>
+          </div>
+
+          <div class="incluye-card">
+            <h3>Soporte según plan</h3>
+            <p>La diferencia entre planes está sobre todo en el tiempo de entrega y el tipo de soporte.</p>
+          </div>
+
+          <div class="incluye-card">
+            <h3>Primer mes incluido</h3>
+            <p>El primer pago incluye tanto el alta inicial como el primer mes del servicio contratado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- === CÓMO FUNCIONA === -->
+    <!-- ================================================== -->
+    <section class="como-funciona">
+      <div class="container">
+        <div class="section-title">
+          <p class="section-tag">Cómo funciona</p>
+          <h2>Un proceso simple, rápido y sin letra pequeña</h2>
+          <p>
+            Queremos que contratar tu web sea un proceso claro desde el principio y fácil de gestionar.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span>01</span>
+            <h3>Nos contactas</h3>
+            <p>Nos escribes y te explicamos todo de forma clara desde el inicio.</p>
+          </div>
+
+          <div class="step-card">
+            <span>02</span>
+            <h3>Definimos tu estructura</h3>
+            <p>Elegimos las 3 páginas: una legal obligatoria y otras dos según tu negocio.</p>
+          </div>
+
+          <div class="step-card">
+            <span>03</span>
+            <h3>Montamos la web</h3>
+            <p>Preparamos una web limpia, profesional y fácil de entender.</p>
+          </div>
+
+          <div class="step-card">
+            <span>04</span>
+            <h3>La dejamos lista</h3>
+            <p>Tu web queda preparada para enseñar tu negocio y facilitar el contacto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- === PLANES === -->
+    <!-- ================================================== -->
+    <section class="planes" id="planes">
+      <div class="container">
+        <div class="section-title">
+          <p class="section-tag">Planes</p>
+          <h2>Planes claros. Sin sorpresas.</h2>
+          <p>
+            Todos los planes incluyen 3 páginas en total: una legal obligatoria y otras dos a elegir.
+            La diferencia está en el tiempo de entrega y el tipo de soporte.
+          </p>
+        </div>
+
+        <div class="planes-grid">
+
+          <div class="plan-card">
+            <p class="plan-name">Basic</p>
+            <h3>99€</h3>
+            <p class="plan-month">Después 39€/mes</p>
+            <p class="plan-first-payment">El primer pago ya incluye el primer mes</p>
+            <ul>
+              <li>3 páginas en total</li>
+              <li>1 legal obligatoria</li>
+              <li>2 páginas a elegir</li>
+              <li>Web lista en 30 días</li>
+              <li>Soporte vía email</li>
+            </ul>
+            <a href="#contacto" class="btn btn-plan">Solicitar</a>
+          </div>
+
+          <div class="plan-card featured">
+            <p class="plan-name">Pro</p>
+            <h3>149€</h3>
+            <p class="plan-month">Después 59€/mes</p>
+            <p class="plan-first-payment">El primer pago ya incluye el primer mes</p>
+            <ul>
+              <li>3 páginas en total</li>
+              <li>1 legal obligatoria</li>
+              <li>2 páginas a elegir</li>
+              <li>Web lista en 20 días</li>
+              <li>Soporte vía WhatsApp</li>
+            </ul>
+            <a href="#contacto" class="btn btn-plan">Solicitar</a>
+          </div>
+
+          <div class="plan-card">
+            <p class="plan-name">Premium</p>
+            <h3>199€</h3>
+            <p class="plan-month">Después 99€/mes</p>
+            <p class="plan-first-payment">El primer pago ya incluye el primer mes</p>
+            <ul>
+              <li>3 páginas en total</li>
+              <li>1 legal obligatoria</li>
+              <li>2 páginas a elegir</li>
+              <li>Web lista en 10 días</li>
+              <li>Soporte vía WhatsApp preferente</li>
+            </ul>
+            <a href="#contacto" class="btn btn-plan">Solicitar</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- === CTA FUERTE === -->
+    <!-- ================================================== -->
+    <section class="cta">
+      <div class="container cta-container">
+        <h2>Si tu negocio no tiene una buena web, estás perdiendo oportunidades</h2>
+        <p>
+          No necesitas algo complicado. Necesitas algo claro, profesional y listo para funcionar.
+        </p>
+        <a href="#contacto" class="btn btn-primary">Solicitar información</a>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- === CONTACTO === -->
+    <!-- ================================================== -->
+    <section class="contacto" id="contacto">
+      <div class="container contacto-container">
+
+        <div class="contacto-text">
+          <p class="section-tag">Contacto</p>
+          <h2>Te explicamos todo sin compromiso</h2>
+          <p>
+            Escríbenos y te diremos qué opción encaja mejor con tu negocio.
+          </p>
+        </div>
+
+        <form class="contacto-form">
+          <input type="text" placeholder="Nombre" required />
+          <input type="text" placeholder="Negocio" required />
+          <input type="email" placeholder="Email" required />
+          <textarea placeholder="¿Qué necesitas?"></textarea>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================== -->
+  <!-- === FOOTER === -->
+  <!-- ================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <p class="footer-logo">PresenciaDeNegocio</p>
+        <p class="footer-text">
+          Webs simples, claras y profesionales para negocios locales.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#">Aviso legal</a>
+        <a href="#">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
