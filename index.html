@@ -239,10 +239,39 @@
     /* === Hero principal === */
     /* ================================================== */
     .hero {
+      position: relative;
+      overflow: hidden;
       padding: 96px 0 76px;
+      background:
+        linear-gradient(90deg,
+          rgba(246, 248, 251, 0.98) 0%,
+          rgba(246, 248, 251, 0.96) 26%,
+          rgba(246, 248, 251, 0.90) 40%,
+          rgba(246, 248, 251, 0.72) 56%,
+          rgba(246, 248, 251, 0.40) 74%,
+          rgba(246, 248, 251, 0.15) 88%,
+          rgba(246, 248, 251, 0.05) 100%
+        ),
+        url("hero-bg.png");
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: cover;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 78% 42%, rgba(124, 58, 237, 0.08), transparent 24%),
+        radial-gradient(circle at 70% 55%, rgba(37, 99, 235, 0.10), transparent 28%);
+      pointer-events: none;
+      z-index: 0;
     }
 
     .hero-container {
+      position: relative;
+      z-index: 1;
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
       align-items: center;
@@ -267,6 +296,7 @@
       margin-bottom: 18px;
       color: var(--color-texto-oscuro);
       letter-spacing: -1.4px;
+      max-width: 900px;
     }
 
     .hero-description {
@@ -818,9 +848,42 @@
         font-size: 1.82rem;
       }
 
+      .hero {
+        padding: 72px 0 54px;
+        background:
+          linear-gradient(180deg,
+            rgba(246, 248, 251, 0.96) 0%,
+            rgba(246, 248, 251, 0.92) 24%,
+            rgba(246, 248, 251, 0.88) 42%,
+            rgba(246, 248, 251, 0.70) 62%,
+            rgba(246, 248, 251, 0.35) 82%,
+            rgba(246, 248, 251, 0.12) 100%
+          ),
+          url("hero-bg.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+      }
+
       .hero h1 {
         font-size: 2.14rem;
         letter-spacing: -1px;
+      }
+
+      .hero-description {
+        max-width: 100%;
+      }
+
+      .hero-features {
+        gap: 10px;
+      }
+
+      .hero-features li {
+        font-size: 0.88rem;
+      }
+
+      .hero-card {
+        display: none;
       }
 
       .problema-grid,
@@ -875,10 +938,6 @@
 
       .footer-container {
         flex-direction: column;
-      }
-
-      .hero {
-        padding: 72px 0 54px;
       }
 
       .problema,
@@ -954,10 +1013,10 @@
 
             <p class="hero-card-list-title">Incluye:</p>
             <ul>
-             <li>✔ Web clara y profesional</li>
-             <li>✔ Estructura optimizada para tu negocio</li>
-             <li>✔ Hasta 3 páginas incluidas</li>
-             <li>✔ Posibilidad de ampliar o adaptar según necesidades</li>
+              <li>✔ Web clara y profesional</li>
+              <li>✔ Estructura optimizada para tu negocio</li>
+              <li>✔ Hasta 3 páginas incluidas</li>
+              <li>✔ Posibilidad de ampliar o adaptar según necesidades</li>
             </ul>
           </div>
         </div>
