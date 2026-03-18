@@ -611,6 +611,23 @@
       z-index: 2;
     }
 
+    .old-price {
+      text-decoration: line-through;
+      color: #9ca3af;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      position: relative;
+      z-index: 2;
+    }
+
     .plan-card h3 {
       font-size: 2.2rem;
       line-height: 1;
@@ -918,6 +935,10 @@
         padding: 5px 7px;
       }
 
+      .old-price {
+        font-size: 0.7rem;
+      }
+
       .plan-card h3 {
         font-size: 1.34rem;
       }
@@ -988,8 +1009,7 @@
           </h1>
 
           <p class="hero-description">
-            Creamos webs claras, profesionales y listas para funcionar sin complicaciones,
-            con precios transparentes y todo explicado desde el principio.
+            Hoy en día, todo negocio debería tener una web clara y profesional. Por eso hemos simplificado todo el proceso para que puedas tenerla sin complicaciones y sin los precios absurdos de siempre.
           </p>
 
           <div class="hero-buttons">
@@ -1201,14 +1221,20 @@
       <div class="container">
         <div class="section-title">
           <p class="section-tag">Planes</p>
-          <h2>Planes claros. Sin sorpresas.</h2>
+          <h2>Precios pensados para que cualquier negocio pueda tener su web</h2>
+          <p>
+            Durante años, tener una web profesional costaba miles de euros. Hemos simplificado todo el proceso para que cualquier negocio pueda acceder a ella con una estructura clara, rápida y profesional.
+          </p>
         </div>
 
         <div class="planes-grid">
 
           <div class="plan-card">
             <p class="plan-name">Basic</p>
-            <h3>99€</h3>
+            <p class="old-price">Antes 2.999€</p>
+            <div class="price-row">
+              <h3>99€</h3>
+            </div>
             <p class="plan-month">Después 39€/mes</p>
             <p class="plan-first-payment">El primer pago ya incluye el primer mes</p>
             <ul>
@@ -1223,7 +1249,10 @@
 
           <div class="plan-card featured">
             <p class="plan-name">Pro</p>
-            <h3>149€</h3>
+            <p class="old-price">Antes 4.999€</p>
+            <div class="price-row">
+              <h3>149€</h3>
+            </div>
             <p class="plan-month">Después 59€/mes</p>
             <p class="plan-first-payment">El primer pago ya incluye el primer mes</p>
             <ul>
@@ -1238,7 +1267,10 @@
 
           <div class="plan-card">
             <p class="plan-name">Premium</p>
-            <h3>199€</h3>
+            <p class="old-price">Antes 6.999€</p>
+            <div class="price-row">
+              <h3>199€</h3>
+            </div>
             <p class="plan-month">Después 99€/mes</p>
             <p class="plan-first-payment">El primer pago ya incluye el primer mes</p>
             <ul>
