@@ -2,18 +2,60 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Contacta | Presencia de Negocio</title>
+  <meta
+    name="description"
+    content="Contacta con Presencia de Negocio y te ayudaremos a elegir la mejor opción para crear una web clara, profesional y accesible para tu negocio."
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Presencia de Negocio" />
+  <meta name="theme-color" content="#2563eb" />
 
-  <meta name="description" content="Contacta con nosotros y te ayudamos a crear una web clara, profesional y accesible para tu negocio." />
+  <link rel="canonical" href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/contacta.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Presencia de Negocio" />
+  <meta property="og:title" content="Contacta | Presencia de Negocio" />
+  <meta
+    property="og:description"
+    content="Escríbenos y te explicaremos qué opción encaja mejor con tu negocio, sin complicaciones y sin compromiso."
+  />
+  <meta property="og:url" content="https://presenciadenegocioapp.github.io/web-presenciadenegocio/contacta.html" />
+  <meta property="og:image" content="https://presenciadenegocioapp.github.io/web-presenciadenegocio/hero-bg.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contacta | Presencia de Negocio" />
+  <meta
+    name="twitter:description"
+    content="Contacta con Presencia de Negocio y descubre qué web encaja mejor con tu negocio."
+  />
+  <meta name="twitter:image" content="https://presenciadenegocioapp.github.io/web-presenciadenegocio/hero-bg.png" />
 
   <style>
     :root {
-      --color-azul: #2563eb;
-      --color-lila: #7c3aed;
-      --color-texto: #111827;
-      --color-secundario: #4b5563;
+      --color-fondo-principal: #ffffff;
+      --color-fondo-secundario: #f6f8fb;
+      --color-fondo-terciario: #eef3ff;
+      --color-fondo-oscuro: #0b1220;
+      --color-fondo-card: rgba(255, 255, 255, 0.9);
+      --color-fondo-card-oscura: #111827;
+      --color-fondo-destacado: #2563eb;
+      --color-fondo-destacado-hover: #1d4ed8;
+      --color-fondo-acento: #7c3aed;
+      --color-fondo-borde-suave: #e5e7eb;
+      --color-fondo-borde-fuerte: #cfd8e3;
+
+      --color-texto-principal: #111827;
+      --color-texto-secundario: #4b5563;
+      --color-texto-suave: #6b7280;
+      --color-texto-claro: #cbd5e1;
+      --color-texto-blanco: #ffffff;
+      --color-texto-destacado: #2563eb;
+      --color-texto-acento: #7c3aed;
+      --color-texto-oscuro: #0b1220;
     }
 
     * {
@@ -22,217 +64,847 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background:
         radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.08), transparent 28%),
-        #ffffff;
-      color: var(--color-texto);
+        radial-gradient(circle at top right, rgba(124, 58, 237, 0.08), transparent 24%),
+        var(--color-fondo-principal);
+      color: var(--color-texto-principal);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     .container {
-      width: min(1100px, 92%);
-      margin: auto;
+      width: min(1180px, 92%);
+      margin: 0 auto;
     }
 
-    /* HEADER */
+    .section-tag {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-texto-destacado);
+      margin-bottom: 12px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background-color: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .section-title {
+      max-width: 820px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .section-title h2 {
+      font-size: 2.35rem;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      color: var(--color-texto-oscuro);
+    }
+
+    .section-title p {
+      color: var(--color-texto-secundario);
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--color-fondo-destacado), var(--color-fondo-acento));
+      color: var(--color-texto-blanco);
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(37, 99, 235, 0.22);
+    }
+
+    .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: var(--color-texto-principal);
+      border: 1px solid var(--color-fondo-borde-suave);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--color-fondo-principal);
+      transform: translateY(-1px);
+    }
+
     .header {
-      padding: 20px 0;
-      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.7);
+    }
+
+    .header-container {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--color-texto-oscuro);
+      white-space: nowrap;
+    }
+
+    .logo span {
+      background: linear-gradient(135deg, var(--color-texto-destacado), var(--color-texto-acento));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      gap: 24px;
     }
 
-    .logo {
-      font-weight: 900;
-      font-size: 1.3rem;
-    }
-
-    .logo span {
-      background: linear-gradient(135deg, var(--color-azul), var(--color-lila));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .nav-links a {
-      margin-left: 18px;
+    .nav a {
+      font-size: 0.95rem;
+      color: var(--color-texto-principal);
       font-weight: 600;
-      color: var(--color-texto);
-      text-decoration: none;
+      transition: 0.2s ease;
     }
 
-    .nav-links a:hover {
-      color: var(--color-azul);
+    .nav a:hover,
+    .nav a.active {
+      color: var(--color-texto-destacado);
     }
 
-    /* HERO */
+    .header-cta {
+      background-color: var(--color-fondo-oscuro);
+      color: var(--color-texto-blanco);
+      box-shadow: 0 8px 24px rgba(11, 18, 32, 0.16);
+    }
+
+    .header-cta:hover {
+      transform: translateY(-1px);
+    }
+
     .hero {
-      padding: 80px 0 50px;
-      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 96px 0 76px;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.10), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.10), transparent 22%),
+        linear-gradient(180deg, #ffffff 0%, #f7f9fd 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 72% 28%, rgba(37, 99, 235, 0.10), transparent 18%),
+        radial-gradient(circle at 80% 65%, rgba(124, 58, 237, 0.10), transparent 20%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 42px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--color-texto-destacado);
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background-color: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.14);
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
+      font-size: 3.1rem;
+      line-height: 1.04;
+      margin-bottom: 18px;
+      color: var(--color-texto-oscuro);
+      letter-spacing: -1.2px;
+      max-width: 800px;
     }
 
-    .hero p {
-      color: var(--color-secundario);
-      max-width: 600px;
-      margin: auto;
+    .hero-description {
+      font-size: 1.08rem;
+      color: var(--color-texto-secundario);
+      max-width: 740px;
+      margin-bottom: 28px;
     }
 
-    /* FORM */
-    .form-section {
-      padding: 40px 0 80px;
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
-    .form-card {
-      background: white;
-      border-radius: 24px;
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-visual-card {
+      position: relative;
+      min-height: 400px;
+      border-radius: 30px;
       padding: 30px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-      border: 1px solid #e5e7eb;
-      max-width: 600px;
-      margin: auto;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.96), rgba(124, 58, 237, 0.92));
+      box-shadow:
+        0 24px 60px rgba(37, 99, 235, 0.18),
+        0 28px 70px rgba(124, 58, 237, 0.12);
     }
 
-    .form-card h2 {
-      margin-bottom: 10px;
+    .hero-visual-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.22), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.14), transparent 28%);
+      pointer-events: none;
     }
 
-    .form-card p {
-      color: var(--color-secundario);
+    .hero-visual-card::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -70px;
+      top: -70px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      filter: blur(4px);
+      pointer-events: none;
+    }
+
+    .visual-card-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      height: 100%;
+    }
+
+    .visual-top-badge {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      backdrop-filter: blur(10px);
+    }
+
+    .visual-card-title {
+      color: #ffffff;
+      font-size: 1.95rem;
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      max-width: 420px;
+    }
+
+    .visual-card-subtitle {
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 1rem;
+      max-width: 420px;
+    }
+
+    .visual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .visual-mini-card {
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .visual-mini-card strong {
+      display: block;
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    .visual-mini-card span {
+      display: block;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .contact-section {
+      padding: 84px 0;
+      background-color: var(--color-fondo-principal);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .contact-info-card,
+    .contact-form-card {
+      background-color: var(--color-fondo-card);
+      border: 1px solid var(--color-fondo-borde-suave);
+      border-radius: 26px;
+      padding: 30px;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+    }
+
+    .contact-info-card h2,
+    .contact-form-card h2 {
+      font-size: 2rem;
+      line-height: 1.12;
+      margin-bottom: 14px;
+      color: var(--color-texto-oscuro);
+    }
+
+    .contact-info-card > p,
+    .contact-form-card > p {
+      color: var(--color-texto-secundario);
       margin-bottom: 20px;
     }
 
-    .form {
+    .info-list {
+      display: grid;
+      gap: 14px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .info-list li {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(37, 99, 235, 0.04);
+      border: 1px solid rgba(37, 99, 235, 0.08);
+    }
+
+    .info-list strong {
+      display: block;
+      color: var(--color-texto-oscuro);
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .info-list span {
+      color: var(--color-texto-secundario);
+      font-size: 0.96rem;
+    }
+
+    .contact-form {
       display: grid;
       gap: 14px;
     }
 
-    input, textarea, select {
-      padding: 14px;
-      border-radius: 12px;
-      border: 1px solid #d1d5db;
-      font-family: inherit;
-    }
-
-    textarea {
-      min-height: 140px;
-    }
-
-    input:focus, textarea:focus, select:focus {
-      outline: none;
-      border-color: var(--color-azul);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-    }
-
-    .btn {
-      padding: 14px;
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      border: 1px solid var(--color-fondo-borde-fuerte);
       border-radius: 14px;
-      border: none;
-      font-weight: 700;
-      cursor: pointer;
-      background: linear-gradient(135deg, var(--color-azul), var(--color-lila));
-      color: white;
-      transition: 0.25s;
+      padding: 14px 16px;
+      font-size: 0.96rem;
+      font-family: inherit;
+      color: var(--color-texto-principal);
+      background-color: rgba(255, 255, 255, 0.92);
+      outline: none;
+      transition: 0.2s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      border-color: rgba(37, 99, 235, 0.45);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+    }
+
+    .contact-form textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-note {
+      color: var(--color-texto-suave);
+      font-size: 0.92rem;
+      margin-top: -4px;
+    }
+
+    .faq-contact {
+      padding: 0 0 84px;
+      background-color: var(--color-fondo-principal);
+    }
+
+    .faq-grid {
+      max-width: 980px;
+      margin: 0 auto;
+      display: grid;
+      gap: 18px;
+    }
+
+    .faq-item {
+      background-color: var(--color-fondo-card);
+      border: 1px solid var(--color-fondo-borde-suave);
+      border-radius: 22px;
+      padding: 22px 24px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
+    }
+
+    .faq-item h3 {
+      font-size: 1.08rem;
+      color: var(--color-texto-oscuro);
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      color: var(--color-texto-secundario);
+      font-size: 0.97rem;
+    }
+
+    .cta {
+      padding: 86px 0;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.18), transparent 26%),
+        var(--color-fondo-oscuro);
+      color: var(--color-texto-blanco);
+    }
+
+    .cta-container {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .cta h2 {
+      font-size: 2.45rem;
+      line-height: 1.12;
+      margin-bottom: 16px;
+      letter-spacing: -0.8px;
+    }
+
+    .cta p {
+      color: var(--color-texto-claro);
+      font-size: 1.02rem;
+      margin-bottom: 24px;
     }
 
     .footer {
-      padding: 30px 0;
-      text-align: center;
-      border-top: 1px solid #e5e7eb;
-      color: #6b7280;
+      background-color: var(--color-fondo-oscuro);
+      color: var(--color-texto-blanco);
+      padding: 36px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
 
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .footer-logo {
+      font-size: 1.15rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .footer-text {
+      max-width: 430px;
+      color: var(--color-texto-claro);
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: var(--color-texto-claro);
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-texto-blanco);
+    }
+
+    @media (max-width: 980px) {
+      .hero-container,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .header-container {
+        min-height: auto;
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .nav a {
+        font-size: 0.92rem;
+      }
+
+      .header-cta {
+        display: none;
+      }
+
+      .hero {
+        padding: 72px 0 54px;
+      }
+
+      .hero h1,
+      .contact-info-card h2,
+      .contact-form-card h2,
+      .section-title h2,
+      .cta h2 {
+        font-size: 1.92rem;
+      }
+
+      .hero-description {
+        max-width: 100%;
+      }
+
+      .hero-visual-card,
+      .contact-info-card,
+      .contact-form-card {
+        padding: 22px;
+      }
+
+      .visual-card-title {
+        font-size: 1.55rem;
+      }
+
+      .visual-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-section,
+      .faq-contact,
+      .cta {
+        padding: 62px 0;
+      }
+
+      .footer-container {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
-
 <body>
 
-  <!-- HEADER -->
   <header class="header">
-    <div class="container nav">
-      <div class="logo">Presencia<span>DeNegocio</span></div>
+    <div class="container header-container">
+      <a href="index.html" class="logo">Presencia<span>DeNegocio</span></a>
 
-      <div class="nav-links">
+      <nav class="nav">
         <a href="index.html">Inicio</a>
         <a href="sobre-nosotros.html">Sobre nosotros</a>
-        <a href="contacta.html">Contacta</a>
-      </div>
+        <a href="contacta.html" class="active">Contacta</a>
+      </nav>
+
+      <a href="index.html#contacto" class="btn header-cta">Solicitar información</a>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1>Contacta con nosotros</h1>
-      <p>
-        Cuéntanos qué necesitas y te ayudaremos a entender qué tipo de web encaja mejor con tu negocio.
-      </p>
-    </div>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-copy">
+          <p class="hero-tag">Contacta</p>
 
-  <!-- FORMULARIO -->
-  <section class="form-section">
-    <div class="container">
-      <div class="form-card">
+          <h1>
+            Te explicamos todo de forma clara y sin complicaciones
+          </h1>
 
-        <h2>Escríbenos</h2>
-        <p>Te responderemos lo antes posible.</p>
+          <p class="hero-description">
+            Si tienes dudas, quieres saber qué opción encaja mejor con tu negocio o simplemente quieres dar el primer paso, escríbenos. Te ayudaremos a entenderlo todo de forma simple y sin compromiso.
+          </p>
 
-        <form id="form" action="https://formsubmit.co/aqui-va-tu-mail@gmail.com" method="POST" class="form">
+          <div class="hero-buttons">
+            <a href="#formulario" class="btn btn-primary">Ir al formulario</a>
+            <a href="index.html" class="btn btn-secondary">Volver al inicio</a>
+          </div>
+        </div>
 
-          <input type="text" name="nombre" placeholder="Nombre" required>
-          <input type="email" name="email" placeholder="Email" required>
+        <div class="hero-visual">
+          <div class="hero-visual-card">
+            <div class="visual-card-inner">
+              <span class="visual-top-badge">Presencia de Negocio</span>
 
-          <select name="interes" required>
-            <option value="">¿Qué necesitas?</option>
-            <option>Crear web</option>
-            <option>Información</option>
-            <option>Dudas</option>
-          </select>
+              <div>
+                <h2 class="visual-card-title">
+                  Una forma simple de empezar
+                </h2>
+                <p class="visual-card-subtitle">
+                  Cuéntanos tu idea, tu negocio o lo que necesitas y te orientaremos sin rodeos.
+                </p>
+              </div>
 
-          <textarea name="mensaje" placeholder="Cuéntanos tu caso"></textarea>
+              <div class="visual-grid">
+                <div class="visual-mini-card">
+                  <strong>Sin compromiso</strong>
+                  <span>Te explicamos qué opción encaja mejor sin presión ni complicaciones.</span>
+                </div>
 
-          <!-- CONFIG FORM SUBMIT -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="mensaje-enviado.html">
-          <input type="hidden" name="_subject" value="Nuevo contacto web">
+                <div class="visual-mini-card">
+                  <strong>Todo claro desde el inicio</strong>
+                  <span>Resolvemos dudas y te ayudamos a entender cómo funcionaría tu web.</span>
+                </div>
 
-          <button type="submit" class="btn">Enviar mensaje</button>
+                <div class="visual-mini-card">
+                  <strong>Negocios reales</strong>
+                  <span>Trabajamos pensando en necesidades prácticas, no en procesos innecesarios.</span>
+                </div>
 
-        </form>
+                <div class="visual-mini-card">
+                  <strong>Más fácil de lo que parece</strong>
+                  <span>Queremos que dar el paso a tener web se sienta sencillo y asumible.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="contact-section" id="formulario">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <p class="section-tag">Antes de escribirnos</p>
+            <h2>Qué puedes contarnos</h2>
+            <p>
+              No necesitas tenerlo todo claro para escribirnos. Puedes contactar tanto si ya sabes lo que quieres como si simplemente necesitas orientación.
+            </p>
+
+            <ul class="info-list">
+              <li>
+                <strong>Tu tipo de negocio</strong>
+                <span>Cuéntanos a qué te dedicas o qué tipo de web te gustaría tener.</span>
+              </li>
+              <li>
+                <strong>Qué necesitas</strong>
+                <span>Una web desde cero, renovar una antigua o entender qué opción encaja mejor contigo.</span>
+              </li>
+              <li>
+                <strong>Tus dudas</strong>
+                <span>Plazos, estructura, funcionamiento, enfoque o cualquier pregunta que tengas.</span>
+              </li>
+              <li>
+                <strong>Tu idea general</strong>
+                <span>Aunque sea algo básico, nos sirve para orientarte desde el principio.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-form-card">
+            <p class="section-tag">Formulario</p>
+            <h2>Escríbenos</h2>
+            <p>
+              Déjanos tus datos y una breve explicación. Te responderemos de forma clara para ayudarte a dar el siguiente paso.
+            </p>
+
+            <form
+              id="contactForm"
+              class="contact-form"
+              action="https://formsubmit.co/aqui-va-tu-mail@ejemplo.com"
+              method="POST"
+            >
+              <input type="text" name="nombre" placeholder="Nombre" required />
+              <input type="text" name="negocio" placeholder="Negocio" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <select name="interes" required>
+                <option value="">¿Qué necesitas?</option>
+                <option value="web-nueva">Crear una web desde cero</option>
+                <option value="renovar-web">Renovar una web actual</option>
+                <option value="informacion">Recibir información</option>
+                <option value="dudas">Resolver dudas</option>
+              </select>
+              <textarea name="mensaje" placeholder="Cuéntanos un poco más sobre lo que necesitas" required></textarea>
+
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://presenciadenegocioapp.github.io/web-presenciadenegocio/mensaje-enviado.html" />
+              <input type="hidden" name="_subject" value="Nuevo contacto desde Presencia de Negocio" />
+              <input type="hidden" name="_template" value="table" />
+
+              <p class="form-note">
+                Cuanta más información nos des, mejor podremos orientarte desde el inicio.
+              </p>
+
+              <button type="submit" class="btn btn-primary" id="submitButton">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-contact">
+      <div class="container">
+        <div class="section-title">
+          <p class="section-tag">Preguntas frecuentes</p>
+          <h2>Dudas habituales antes de empezar</h2>
+          <p>
+            Estas son algunas de las preguntas que suelen aparecer antes de contratar una web.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>¿Tengo que tener todo decidido antes de escribir?</h3>
+            <p>No. Puedes escribirnos aunque solo tengas una idea general o necesites orientación para entender qué opción encaja mejor con tu negocio.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>¿Puedo preguntar sin compromiso?</h3>
+            <p>Sí. La idea es precisamente ayudarte a resolver dudas y explicarte el proceso de forma clara antes de dar ningún paso.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>¿Sirve aunque todavía no tenga una idea muy concreta?</h3>
+            <p>También. Muchas veces basta con saber a qué te dedicas y qué necesitas mejorar para empezar a plantear una web útil y profesional.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>¿Me podéis orientar sobre qué plan elegir?</h3>
+            <p>Sí. Si nos explicas tu caso, te diremos qué opción puede tener más sentido según tu negocio y lo que buscas conseguir.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-container">
+        <h2>Dar el primer paso debería ser sencillo</h2>
+        <p>
+          Escríbenos, cuéntanos tu caso y te ayudaremos a entender qué opción puede encajar mejor contigo.
+        </p>
+        <a href="#formulario" class="btn btn-primary">Ir al formulario</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <p class="footer-logo">PresenciaDeNegocio</p>
+        <p class="footer-text">
+          Webs simples, claras y profesionales para negocios locales.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#">Aviso legal</a>
+        <a href="#">Privacidad</a>
       </div>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© Presencia de Negocio</p>
   </footer>
 
   <script>
-    document.getElementById('form').addEventListener('submit', function(e){
-      const email = this.querySelector('input[name="email"]').value;
+    const contactForm = document.getElementById('contactForm');
+    const submitButton = document.getElementById('submitButton');
 
-      if(!email.includes("@")){
+    contactForm.addEventListener('submit', function (e) {
+      const nombre = contactForm.querySelector('input[name="nombre"]').value.trim();
+      const negocio = contactForm.querySelector('input[name="negocio"]').value.trim();
+      const email = contactForm.querySelector('input[name="email"]').value.trim();
+      const interes = contactForm.querySelector('select[name="interes"]').value.trim();
+      const mensaje = contactForm.querySelector('textarea[name="mensaje"]').value.trim();
+
+      if (!nombre || !negocio || !email || !interes || !mensaje) {
         e.preventDefault();
-        alert("Introduce un email válido");
+        alert('Por favor, completa todos los campos.');
+        return;
       }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        e.preventDefault();
+        alert('Por favor, introduce un email válido.');
+        return;
+      }
+
+      submitButton.textContent = 'Enviando...';
+      submitButton.disabled = true;
     });
   </script>
-
 </body>
 </html>
