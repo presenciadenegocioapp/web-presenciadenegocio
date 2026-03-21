@@ -1458,13 +1458,25 @@
           </p>
         </div>
 
-        <form class="contacto-form">
-          <input type="text" placeholder="Nombre" required />
-          <input type="text" placeholder="Negocio" required />
-          <input type="email" placeholder="Email" required />
-          <textarea placeholder="¿Qué necesitas?"></textarea>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+<form
+  id="contactFormIndex"
+  class="contacto-form"
+  action="https://formsubmit.co/aqui-va-tu-mail@ejemplo.com"
+  method="POST"
+>
+  <input type="text" name="nombre" placeholder="Nombre" required />
+  <input type="text" name="negocio" placeholder="Negocio" required />
+  <input type="email" name="email" placeholder="Email" required />
+  <textarea name="mensaje" placeholder="¿Qué necesitas?" required></textarea>
+
+  <!-- CONFIG -->
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_next" value="https://presenciadenegocioapp.github.io/web-presenciadenegocio/mensaje-enviado.html" />
+  <input type="hidden" name="_subject" value="Nuevo contacto desde la web (Inicio)" />
+  <input type="hidden" name="_template" value="table" />
+
+  <button type="submit" class="btn btn-primary" id="submitBtnIndex">Enviar</button>
+</form>
       </div>
     </section>
   </main>
