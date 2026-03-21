@@ -5,22 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ================================================== -->
-  <!-- === SEO BÁSICO === -->
+  <!-- === SEO === -->
   <!-- ================================================== -->
   <title>Presencia de Negocio | Webs profesionales para negocios locales</title>
   <meta
     name="description"
-    content="Creamos webs profesionales para negocios locales de forma rápida, clara y sin complicaciones. Precios transparentes, primer mes incluido y estructura pensada para convertir."
+    content="Creamos webs profesionales para negocios locales de forma rápida, clara y sin complicaciones. Diseños pensados para transmitir confianza, facilitar el contacto y ayudar a vender mejor."
   />
+  <meta
+    name="keywords"
+    content="webs para negocios locales, diseño web negocios locales, páginas web para autónomos, diseño web profesional, webs para peluquerías, webs para clínicas, webs para fontaneros"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Presencia de Negocio" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <link rel="canonical" href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Presencia de Negocio" />
+  <meta property="og:title" content="Presencia de Negocio | Webs profesionales para negocios locales" />
+  <meta
+    property="og:description"
+    content="Webs claras, profesionales y pensadas para negocios locales que necesitan transmitir confianza y facilitar el contacto."
+  />
+  <meta property="og:url" content="https://presenciadenegocioapp.github.io/web-presenciadenegocio/" />
+  <meta property="og:image" content="https://presenciadenegocioapp.github.io/web-presenciadenegocio/hero-bg.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Presencia de Negocio | Webs profesionales para negocios locales" />
+  <meta
+    name="twitter:description"
+    content="Creamos webs claras, profesionales y pensadas para negocios locales que necesitan transmitir confianza y facilitar el contacto."
+  />
+  <meta name="twitter:image" content="https://presenciadenegocioapp.github.io/web-presenciadenegocio/hero-bg.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Presencia de Negocio",
+    "url": "https://presenciadenegocioapp.github.io/web-presenciadenegocio/",
+    "description": "Servicio de creación de webs profesionales para negocios locales.",
+    "areaServed": "España",
+    "serviceType": "Diseño web para negocios locales"
+  }
+  </script>
 
   <style>
     /* ================================================== */
-    /* === SECCIÓN CSS === */
-    /* ================================================== */
-
-
-    /* ================================================== */
-    /* === Color de fondo === */
+    /* === VARIABLES === */
     /* ================================================== */
     :root {
       --color-fondo-principal: #ffffff;
@@ -34,13 +69,7 @@
       --color-fondo-acento: #7c3aed;
       --color-fondo-borde-suave: #e5e7eb;
       --color-fondo-borde-fuerte: #cfd8e3;
-    }
 
-
-    /* ================================================== */
-    /* === Color de letras === */
-    /* ================================================== */
-    :root {
       --color-texto-principal: #111827;
       --color-texto-secundario: #4b5563;
       --color-texto-suave: #6b7280;
@@ -51,10 +80,8 @@
       --color-texto-oscuro: #0b1220;
     }
 
-
     /* ================================================== */
-    /* === Seccion Inicio 1 === */
-    /* === Reset y base general === */
+    /* === RESET / BASE === */
     /* ================================================== */
     * {
       margin: 0;
@@ -170,10 +197,8 @@
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
     }
 
-
     /* ================================================== */
-    /* === Seccion Inicio 2 === */
-    /* === Header / navegación === */
+    /* === HEADER / NAVEGACIÓN === */
     /* ================================================== */
     .header {
       position: sticky;
@@ -233,10 +258,8 @@
       transform: translateY(-1px);
     }
 
-
     /* ================================================== */
-    /* === Seccion Inicio 3 === */
-    /* === Hero principal === */
+    /* === HERO === */
     /* ================================================== */
     .hero {
       position: relative;
@@ -389,10 +412,8 @@
       font-size: 0.96rem;
     }
 
-
     /* ================================================== */
-    /* === Seccion Inicio 4 === */
-    /* === Problema / dolor === */
+    /* === PROBLEMA === */
     /* ================================================== */
     .problema {
       padding: 84px 0;
@@ -424,10 +445,8 @@
       font-size: 0.97rem;
     }
 
-
     /* ================================================== */
-    /* === Seccion Inicio 5 === */
-    /* === Ideas para negocios === */
+    /* === SECTORES === */
     /* ================================================== */
     .sectores {
       padding: 84px 0;
@@ -459,10 +478,163 @@
       font-size: 0.97rem;
     }
 
+    /* ================================================== */
+    /* === EJEMPLOS / CARRUSEL 3D === */
+    /* ================================================== */
+    .ejemplos {
+      padding: 84px 0;
+      background:
+        linear-gradient(180deg, #ffffff 0%, #f7f9fd 100%);
+      overflow: hidden;
+    }
+
+    .ejemplos-header {
+      max-width: 840px;
+      margin: 0 auto 36px;
+      text-align: center;
+    }
+
+    .ejemplos-header h2 {
+      font-size: 2.35rem;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      color: var(--color-texto-oscuro);
+    }
+
+    .ejemplos-header p {
+      color: var(--color-texto-secundario);
+      font-size: 1rem;
+    }
+
+    .carousel-3d {
+      position: relative;
+      max-width: 1260px;
+      margin: 0 auto;
+      perspective: 1800px;
+      padding: 16px 68px 8px;
+    }
+
+    .carousel-track {
+      position: relative;
+      height: 620px;
+      transform-style: preserve-3d;
+    }
+
+    .carousel-card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 240px;
+      aspect-ratio: 9 / 16;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
+      transform-style: preserve-3d;
+      transition:
+        transform .55s cubic-bezier(.2,.8,.2,1),
+        box-shadow .35s ease,
+        filter .35s ease,
+        opacity .35s ease;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      will-change: transform;
+    }
+
+    .carousel-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #fff;
+    }
+
+    .carousel-card::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 28%;
+      background: linear-gradient(to top, rgba(15,23,42,.78), rgba(15,23,42,0));
+      pointer-events: none;
+    }
+
+    .card-label {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.92);
+      color: var(--color-texto-oscuro);
+      font-size: 0.88rem;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(0,0,0,.10);
+    }
+
+    .carousel-card.active {
+      box-shadow: 0 34px 70px rgba(15, 23, 42, 0.28);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 25;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,.94);
+      color: var(--color-texto-oscuro);
+      font-size: 34px;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(15,23,42,.14);
+      transition: .2s ease;
+    }
+
+    .carousel-btn:hover {
+      background: #ffffff;
+      transform: translateY(-50%) scale(1.03);
+    }
+
+    .carousel-btn.prev {
+      left: 0;
+    }
+
+    .carousel-btn.next {
+      right: 0;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(37, 99, 235, 0.18);
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .carousel-dot.active {
+      background: var(--color-fondo-destacado);
+      transform: scale(1.15);
+    }
 
     /* ================================================== */
-    /* === Seccion Inicio 6 === */
-    /* === Qué incluye === */
+    /* === QUÉ INCLUYE === */
     /* ================================================== */
     .incluye {
       padding: 84px 0;
@@ -494,10 +666,8 @@
       font-size: 0.97rem;
     }
 
-
     /* ================================================== */
-    /* === Seccion Inicio 7 === */
-    /* === Cómo funciona === */
+    /* === CÓMO FUNCIONA === */
     /* ================================================== */
     .como-funciona {
       padding: 84px 0;
@@ -543,10 +713,8 @@
       font-size: 0.97rem;
     }
 
-
     /* ================================================== */
-    /* === Seccion Inicio 8 === */
-    /* === Planes === */
+    /* === PLANES === */
     /* ================================================== */
     .planes {
       padding: 84px 0;
@@ -682,10 +850,8 @@
       box-shadow: 0 10px 24px rgba(11, 18, 32, 0.16);
     }
 
-
     /* ================================================== */
-    /* === Seccion Inicio 9 === */
-    /* === CTA grande === */
+    /* === CTA === */
     /* ================================================== */
     .cta {
       padding: 86px 0;
@@ -715,10 +881,8 @@
       margin-bottom: 24px;
     }
 
-
     /* ================================================== */
-    /* === Seccion Inicio 10 === */
-    /* === Contacto === */
+    /* === CONTACTO === */
     /* ================================================== */
     .contacto {
       padding: 84px 0;
@@ -782,10 +946,8 @@
       width: 100%;
     }
 
-
     /* ================================================== */
-    /* === Seccion Inicio 11 === */
-    /* === Footer === */
+    /* === FOOTER === */
     /* ================================================== */
     .footer {
       background-color: var(--color-fondo-oscuro);
@@ -828,10 +990,8 @@
       color: var(--color-texto-blanco);
     }
 
-
     /* ================================================== */
-    /* === Seccion Inicio 12 === */
-    /* === Responsive / móvil === */
+    /* === RESPONSIVE === */
     /* ================================================== */
     @media (max-width: 1000px) {
       .hero-container,
@@ -851,6 +1011,14 @@
       .hero h1 {
         font-size: 2.7rem;
       }
+
+      .carousel-track {
+        height: 560px;
+      }
+
+      .carousel-card {
+        width: 210px;
+      }
     }
 
     @media (max-width: 760px) {
@@ -860,6 +1028,7 @@
       }
 
       .section-title h2,
+      .ejemplos-header h2,
       .contacto-text h2,
       .cta h2 {
         font-size: 1.82rem;
@@ -911,51 +1080,48 @@
       }
 
       .sectores-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
 
       .planes-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        grid-template-columns: 1fr;
+        gap: 16px;
       }
 
       .plan-card {
-        padding: 14px;
+        padding: 18px;
         border-radius: 18px;
       }
 
       .plan-card.featured {
-        transform: translateY(-3px);
+        transform: translateY(-2px);
       }
 
       .plan-card.featured::after {
-        top: 8px;
-        right: 8px;
-        font-size: 0.58rem;
-        padding: 5px 7px;
-      }
-
-      .old-price {
-        font-size: 0.7rem;
+        top: 10px;
+        right: 10px;
+        font-size: 0.62rem;
+        padding: 5px 8px;
       }
 
       .plan-card h3 {
-        font-size: 1.34rem;
+        font-size: 1.6rem;
       }
 
-      .plan-name {
-        font-size: 0.7rem;
+      .carousel-3d {
+        padding: 10px 0 0;
       }
 
-      .plan-month,
-      .plan-first-payment,
-      .plan-card ul li {
-        font-size: 0.79rem;
+      .carousel-btn {
+        display: none;
       }
 
-      .btn-plan {
-        padding: 11px 8px;
-        font-size: 0.8rem;
+      .carousel-track {
+        height: 500px;
+      }
+
+      .carousel-card {
+        width: 180px;
       }
 
       .footer-container {
@@ -964,6 +1130,7 @@
 
       .problema,
       .sectores,
+      .ejemplos,
       .incluye,
       .como-funciona,
       .planes,
@@ -981,22 +1148,22 @@
   <!-- ================================================== -->
   <header class="header">
     <div class="container header-container">
-      <a href="#" class="logo">Presencia<span>DeNegocio</span></a>
+      <a href="index.html" class="logo">Presencia<span>DeNegocio</span></a>
 
       <nav class="nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#planes">Planes</a>
-        <a href="#contacto">Contacto</a>
+        <a href="index.html">Inicio</a>
+        <a href="sobre-nosotros.html">Sobre nosotros</a>
+        <a href="contacta.html">Contacta</a>
       </nav>
 
-      <a href="#contacto" class="btn header-cta">Solicitar información</a>
+      <a href="contacta.html" class="btn header-cta">Solicitar información</a>
     </div>
   </header>
 
   <main>
 
     <!-- ================================================== -->
-    <!-- === HERO ULTRA DIRECTO === -->
+    <!-- === HERO === -->
     <!-- ================================================== -->
     <section class="hero" id="inicio">
       <div class="container hero-container">
@@ -1009,12 +1176,12 @@
           </h1>
 
           <p class="hero-description">
-            Hoy en día, todo negocio debería tener una web clara y profesional. Por eso hemos simplificado todo el proceso para que puedas tenerla sin complicaciones y sin los precios absurdos de siempre.
+            Hoy en día, todo negocio debería tener una web clara y profesional. Por eso hemos simplificado el proceso para que puedas tenerla sin complicaciones, con una estructura bien pensada y una imagen que ayude a generar confianza.
           </p>
 
           <div class="hero-buttons">
             <a href="#planes" class="btn btn-primary">Ver planes</a>
-            <a href="#contacto" class="btn btn-secondary">Solicitar información</a>
+            <a href="contacta.html" class="btn btn-secondary">Solicitar información</a>
           </div>
 
           <ul class="hero-features">
@@ -1078,7 +1245,7 @@
     </section>
 
     <!-- ================================================== -->
-    <!-- === IDEAS PARA NEGOCIOS === -->
+    <!-- === SECTORES === -->
     <!-- ================================================== -->
     <section class="sectores" id="sectores">
       <div class="container">
@@ -1099,7 +1266,7 @@
 
           <div class="sector-card">
             <h3>Mascotas</h3>
-            <p>Veterinarios, peluquerías caninas, hipicas, guarderías, adiestradores y otros servicios.</p>
+            <p>Veterinarios, peluquerías caninas, hípicas, guarderías, adiestradores y otros servicios.</p>
           </div>
 
           <div class="sector-card">
@@ -1122,6 +1289,72 @@
             <p>Si tu negocio necesita una web clara y profesional, este servicio puede encajar contigo.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- === EJEMPLOS DE WEBS === -->
+    <!-- ================================================== -->
+    <section class="ejemplos" id="ejemplos">
+      <div class="container">
+        <div class="ejemplos-header">
+          <p class="section-tag">Ejemplos</p>
+          <h2>Así pueden verse nuestras webs</h2>
+          <p>
+            Diseños pensados para negocios locales que necesitan transmitir confianza,
+            explicar mejor lo que hacen y facilitar el contacto desde el primer segundo.
+          </p>
+        </div>
+
+        <div class="carousel-3d" id="carousel3d">
+          <button class="carousel-btn prev" type="button" aria-label="Ver ejemplo anterior">‹</button>
+
+          <div class="carousel-track">
+            <article class="carousel-card active" data-label="Dentista">
+              <img src="Dentista.png" alt="Ejemplo de web profesional para dentista" loading="lazy" />
+              <span class="card-label">Dentista</span>
+            </article>
+
+            <article class="carousel-card" data-label="Nutrición">
+              <img src="Nutricionista-1.png" alt="Ejemplo de web profesional para nutricionista" loading="lazy" />
+              <span class="card-label">Nutrición</span>
+            </article>
+
+            <article class="carousel-card" data-label="Lashista">
+              <img src="Lashista.png" alt="Ejemplo de web profesional para lashista" loading="lazy" />
+              <span class="card-label">Lashista</span>
+            </article>
+
+            <article class="carousel-card" data-label="Pádel">
+              <img src="Padel.png" alt="Ejemplo de web profesional para club de pádel" loading="lazy" />
+              <span class="card-label">Pádel</span>
+            </article>
+
+            <article class="carousel-card" data-label="Nutrición 2">
+              <img src="Nutricionista-2.png" alt="Segundo ejemplo de web profesional para nutrición" loading="lazy" />
+              <span class="card-label">Nutrición 2</span>
+            </article>
+
+            <article class="carousel-card" data-label="Fontanero">
+              <img src="Fontanero.png" alt="Ejemplo de web profesional para fontanero" loading="lazy" />
+              <span class="card-label">Fontanero</span>
+            </article>
+
+            <article class="carousel-card" data-label="Reiki">
+              <img src="Reiki.png" alt="Ejemplo de web profesional para reiki" loading="lazy" />
+              <span class="card-label">Reiki</span>
+            </article>
+
+            <article class="carousel-card" data-label="Jardinería">
+              <img src="Jardineria.png" alt="Ejemplo de web profesional para jardinería" loading="lazy" />
+              <span class="card-label">Jardinería</span>
+            </article>
+          </div>
+
+          <button class="carousel-btn next" type="button" aria-label="Ver siguiente ejemplo">›</button>
+        </div>
+
+        <div class="carousel-dots" id="carouselDots"></div>
       </div>
     </section>
 
@@ -1162,7 +1395,7 @@
 
           <div class="incluye-card">
             <h3>Soporte según plan</h3>
-            <p>La diferencia entre planes difiere en los tiempos de entrega y soporte.</p>
+            <p>Las diferencias entre planes están principalmente en los tiempos de entrega y el tipo de soporte.</p>
           </div>
 
           <div class="incluye-card">
@@ -1223,7 +1456,7 @@
           <p class="section-tag">Planes</p>
           <h2>Precios pensados para que cualquier negocio pueda tener su web</h2>
           <p>
-           Tener una web ya no es un extra, es casi una necesidad para cualquier negocio. Por eso hemos simplificado todo el proceso para que puedas tenerla de forma clara, rápida y sin complicaciones.
+            Tener una web ya no es un extra, es casi una necesidad para cualquier negocio. Por eso hemos simplificado todo el proceso para que puedas tenerla de forma clara, rápida y sin complicaciones.
           </p>
         </div>
 
@@ -1244,7 +1477,7 @@
               <li>Web lista en 30 días</li>
               <li>Soporte vía email</li>
             </ul>
-            <a href="#contacto" class="btn btn-plan">Solicitar</a>
+            <a href="contacta.html" class="btn btn-plan">Solicitar</a>
           </div>
 
           <div class="plan-card featured">
@@ -1262,7 +1495,7 @@
               <li>Web lista en 20 días</li>
               <li>Soporte vía WhatsApp</li>
             </ul>
-            <a href="#contacto" class="btn btn-plan">Solicitar</a>
+            <a href="contacta.html" class="btn btn-plan">Solicitar</a>
           </div>
 
           <div class="plan-card">
@@ -1280,7 +1513,7 @@
               <li>Web lista en 10 días</li>
               <li>Soporte vía WhatsApp preferente</li>
             </ul>
-            <a href="#contacto" class="btn btn-plan">Solicitar</a>
+            <a href="contacta.html" class="btn btn-plan">Solicitar</a>
           </div>
 
         </div>
@@ -1288,7 +1521,7 @@
     </section>
 
     <!-- ================================================== -->
-    <!-- === CTA FUERTE === -->
+    <!-- === CTA === -->
     <!-- ================================================== -->
     <section class="cta">
       <div class="container cta-container">
@@ -1296,7 +1529,7 @@
         <p>
           No necesitas algo complicado. Necesitas algo claro, profesional y listo para funcionar.
         </p>
-        <a href="#contacto" class="btn btn-primary">Solicitar información</a>
+        <a href="contacta.html" class="btn btn-primary">Solicitar información</a>
       </div>
     </section>
 
@@ -1346,5 +1579,124 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
+      const track = document.querySelector('.carousel-track');
+      const cards = Array.from(document.querySelectorAll('.carousel-card'));
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
+      const dotsWrap = document.getElementById('carouselDots');
+
+      if (!track || !cards.length) return;
+
+      let activeIndex = 0;
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      cards.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot';
+        dot.type = 'button';
+        dot.setAttribute('aria-label', 'Ir al ejemplo ' + (index + 1));
+        dot.addEventListener('click', () => {
+          activeIndex = index;
+          renderCarousel();
+        });
+        dotsWrap.appendChild(dot);
+      });
+
+      const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+
+      function shortestDistance(index, active, total) {
+        let diff = index - active;
+        if (diff > total / 2) diff -= total;
+        if (diff < -total / 2) diff += total;
+        return diff;
+      }
+
+      function renderCarousel() {
+        const total = cards.length;
+
+        cards.forEach((card, index) => {
+          const offset = shortestDistance(index, activeIndex, total);
+          const abs = Math.abs(offset);
+
+          let translateX = offset * 155;
+          let translateY = abs * 10;
+          let translateZ = abs === 0 ? 220 : 120 - abs * 45;
+          let rotateY = offset * -24;
+          let scale = abs === 0 ? 1.22 : Math.max(0.78, 1 - abs * 0.08);
+          let opacity = abs > 3 ? 0 : 1;
+          let blur = abs === 0 ? 0 : Math.min(abs * 1.2, 3.8);
+          let zIndex = 100 - abs;
+
+          if (window.innerWidth <= 760) {
+            translateX = offset * 92;
+            translateY = abs * 8;
+            translateZ = abs === 0 ? 170 : 90 - abs * 32;
+            rotateY = offset * -16;
+            scale = abs === 0 ? 1.14 : Math.max(0.82, 1 - abs * 0.07);
+            opacity = abs > 2 ? 0 : 1;
+            blur = abs === 0 ? 0 : Math.min(abs * 1.1, 3.2);
+          }
+
+          card.style.transform =
+            `translate(-50%, -50%) translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`;
+          card.style.opacity = opacity;
+          card.style.filter = `blur(${blur}px) saturate(${abs === 0 ? 1 : 0.92})`;
+          card.style.zIndex = zIndex;
+
+          card.classList.toggle('active', index === activeIndex);
+        });
+
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === activeIndex);
+        });
+      }
+
+      function nextCard() {
+        activeIndex = (activeIndex + 1) % cards.length;
+        renderCarousel();
+      }
+
+      function prevCard() {
+        activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+        renderCarousel();
+      }
+
+      prevBtn.addEventListener('click', prevCard);
+      nextBtn.addEventListener('click', nextCard);
+
+      cards.forEach((card, index) => {
+        card.addEventListener('mouseenter', () => {
+          if (window.innerWidth > 760) {
+            activeIndex = index;
+            renderCarousel();
+          }
+        });
+
+        card.addEventListener('click', () => {
+          activeIndex = index;
+          renderCarousel();
+        });
+      });
+
+      track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].clientX;
+      }, { passive: true });
+
+      track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        const distance = touchEndX - touchStartX;
+
+        if (distance > 40) prevCard();
+        if (distance < -40) nextCard();
+      }, { passive: true });
+
+      window.addEventListener('resize', renderCarousel);
+
+      renderCarousel();
+    })();
+  </script>
 </body>
 </html>
