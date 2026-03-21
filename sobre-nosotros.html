@@ -225,18 +225,9 @@
       overflow: hidden;
       padding: 96px 0 76px;
       background:
-        linear-gradient(90deg,
-          rgba(246, 248, 251, 0.84) 0%,
-          rgba(246, 248, 251, 0.74) 22%,
-          rgba(246, 248, 251, 0.58) 40%,
-          rgba(246, 248, 251, 0.40) 58%,
-          rgba(246, 248, 251, 0.20) 76%,
-          rgba(246, 248, 251, 0.00) 100%
-        ),
-        url("hero-bg.png");
-      background-repeat: no-repeat;
-      background-position: 70% center;
-      background-size: 128%;
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.10), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.10), transparent 22%),
+        linear-gradient(180deg, #ffffff 0%, #f7f9fd 100%);
     }
 
     .hero::before {
@@ -244,8 +235,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 78% 42%, rgba(124, 58, 237, 0.10), transparent 24%),
-        radial-gradient(circle at 70% 55%, rgba(37, 99, 235, 0.12), transparent 28%);
+        radial-gradient(circle at 72% 28%, rgba(37, 99, 235, 0.10), transparent 18%),
+        radial-gradient(circle at 80% 65%, rgba(124, 58, 237, 0.10), transparent 20%);
       pointer-events: none;
       z-index: 0;
     }
@@ -253,7 +244,10 @@
     .hero-container {
       position: relative;
       z-index: 1;
-      max-width: 860px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 42px;
     }
 
     .hero-tag {
@@ -288,6 +282,135 @@
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-visual-card {
+      position: relative;
+      min-height: 420px;
+      border-radius: 30px;
+      padding: 30px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.96), rgba(124, 58, 237, 0.92));
+      box-shadow:
+        0 24px 60px rgba(37, 99, 235, 0.18),
+        0 28px 70px rgba(124, 58, 237, 0.12);
+    }
+
+    .hero-visual-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.22), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.14), transparent 28%);
+      pointer-events: none;
+    }
+
+    .hero-visual-card::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -70px;
+      top: -70px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      filter: blur(4px);
+      pointer-events: none;
+    }
+
+    .visual-card-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      height: 100%;
+    }
+
+    .visual-top-badge {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      backdrop-filter: blur(10px);
+    }
+
+    .visual-card-title {
+      color: #ffffff;
+      font-size: 2rem;
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      max-width: 420px;
+    }
+
+    .visual-card-subtitle {
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 1rem;
+      max-width: 420px;
+    }
+
+    .visual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .visual-mini-card {
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .visual-mini-card strong {
+      display: block;
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    .visual-mini-card span {
+      display: block;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .visual-bottom-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .visual-pill {
+      text-align: center;
+      padding: 12px 10px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
     }
 
     .about-intro {
@@ -492,6 +615,16 @@
       color: var(--color-texto-blanco);
     }
 
+    @media (max-width: 980px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual-card {
+        min-height: auto;
+      }
+    }
+
     @media (max-width: 760px) {
       .header-container {
         min-height: auto;
@@ -517,19 +650,6 @@
 
       .hero {
         padding: 72px 0 54px;
-        background:
-          linear-gradient(180deg,
-            rgba(246, 248, 251, 0.84) 0%,
-            rgba(246, 248, 251, 0.72) 20%,
-            rgba(246, 248, 251, 0.56) 40%,
-            rgba(246, 248, 251, 0.38) 60%,
-            rgba(246, 248, 251, 0.22) 78%,
-            rgba(246, 248, 251, 0.02) 100%
-          ),
-          url("hero-bg.png");
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: 145%;
       }
 
       .hero h1,
@@ -541,6 +661,22 @@
 
       .hero-description {
         max-width: 100%;
+      }
+
+      .hero-visual-card {
+        padding: 22px;
+      }
+
+      .visual-card-title {
+        font-size: 1.55rem;
+      }
+
+      .visual-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .visual-bottom-strip {
+        grid-template-columns: 1fr;
       }
 
       .intro-card,
@@ -581,19 +717,66 @@
   <main>
     <section class="hero">
       <div class="container hero-container">
-        <p class="hero-tag">Sobre nosotros</p>
+        <div class="hero-copy">
+          <p class="hero-tag">Sobre nosotros</p>
 
-        <h1>
-          Creamos webs claras, profesionales y accesibles para negocios locales
-        </h1>
+          <h1>
+            Creamos webs claras, profesionales y accesibles para negocios locales
+          </h1>
 
-        <p class="hero-description">
-          Nacimos con una idea muy simple: hoy en día tener web debería ser algo accesible para cualquier negocio que quiera transmitir confianza, explicar bien lo que hace y facilitar el contacto con sus clientes.
-        </p>
+          <p class="hero-description">
+            Nacimos con una idea muy simple: hoy en día tener web debería ser algo accesible para cualquier negocio que quiera transmitir confianza, explicar bien lo que hace y facilitar el contacto con sus clientes.
+          </p>
 
-        <div class="hero-buttons">
-          <a href="contacta.html" class="btn btn-primary">Contacta con nosotros</a>
-          <a href="index.html" class="btn btn-secondary">Volver al inicio</a>
+          <div class="hero-buttons">
+            <a href="contacta.html" class="btn btn-primary">Contacta con nosotros</a>
+            <a href="index.html" class="btn btn-secondary">Volver al inicio</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-visual-card">
+            <div class="visual-card-inner">
+              <span class="visual-top-badge">Presencia de Negocio</span>
+
+              <div>
+                <h2 class="visual-card-title">
+                  Webs claras, profesionales y accesibles
+                </h2>
+                <p class="visual-card-subtitle">
+                  Una alternativa pensada para negocios reales que necesitan buena imagen, claridad y precios razonables.
+                </p>
+              </div>
+
+              <div class="visual-grid">
+                <div class="visual-mini-card">
+                  <strong>Precios razonables</strong>
+                  <span>Sin presupuestos inflados para algo que hoy debería ser más accesible.</span>
+                </div>
+
+                <div class="visual-mini-card">
+                  <strong>Proceso claro</strong>
+                  <span>Una forma de trabajar directa, entendible y sin complicaciones innecesarias.</span>
+                </div>
+
+                <div class="visual-mini-card">
+                  <strong>Negocios reales</strong>
+                  <span>Pensado para quienes necesitan una web útil, profesional y fácil de gestionar.</span>
+                </div>
+
+                <div class="visual-mini-card">
+                  <strong>Imagen que transmite</strong>
+                  <span>Diseños cuidados para reforzar la confianza desde el primer vistazo.</span>
+                </div>
+              </div>
+
+              <div class="visual-bottom-strip">
+                <div class="visual-pill">Sin presupuestos inflados</div>
+                <div class="visual-pill">Pensado para negocios reales</div>
+                <div class="visual-pill">Una web ya no debería ser un lujo</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
