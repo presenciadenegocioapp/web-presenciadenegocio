@@ -1613,5 +1613,32 @@
       renderCarousel();
     })();
   </script>
+  <script>
+  const formIndex = document.getElementById('contactFormIndex');
+  const btnIndex = document.getElementById('submitBtnIndex');
+
+  formIndex.addEventListener('submit', function (e) {
+    const nombre = formIndex.querySelector('input[name="nombre"]').value.trim();
+    const negocio = formIndex.querySelector('input[name="negocio"]').value.trim();
+    const email = formIndex.querySelector('input[name="email"]').value.trim();
+    const mensaje = formIndex.querySelector('textarea[name="mensaje"]').value.trim();
+
+    if (!nombre || !negocio || !email || !mensaje) {
+      e.preventDefault();
+      alert('Por favor, completa todos los campos.');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      e.preventDefault();
+      alert('Introduce un email válido.');
+      return;
+    }
+
+    btnIndex.textContent = 'Enviando...';
+    btnIndex.disabled = true;
+  });
+</script>
 </body>
 </html>
