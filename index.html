@@ -4,9 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ================================================== -->
-  <!-- === SEO === -->
-  <!-- ================================================== -->
   <title>Presencia de Negocio | Webs profesionales para negocios locales</title>
   <meta
     name="description"
@@ -19,7 +16,6 @@
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Presencia de Negocio" />
   <meta name="theme-color" content="#2563eb" />
-
   <link rel="canonical" href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/" />
 
   <meta property="og:type" content="website" />
@@ -54,18 +50,13 @@
   </script>
 
   <style>
-    /* ================================================== */
-    /* === VARIABLES === */
-    /* ================================================== */
     :root {
       --color-fondo-principal: #ffffff;
       --color-fondo-secundario: #f6f8fb;
       --color-fondo-terciario: #eef3ff;
       --color-fondo-oscuro: #0b1220;
       --color-fondo-card: rgba(255, 255, 255, 0.9);
-      --color-fondo-card-oscura: #111827;
       --color-fondo-destacado: #2563eb;
-      --color-fondo-destacado-hover: #1d4ed8;
       --color-fondo-acento: #7c3aed;
       --color-fondo-borde-suave: #e5e7eb;
       --color-fondo-borde-fuerte: #cfd8e3;
@@ -80,9 +71,6 @@
       --color-texto-oscuro: #0b1220;
     }
 
-    /* ================================================== */
-    /* === RESET / BASE === */
-    /* ================================================== */
     * {
       margin: 0;
       padding: 0;
@@ -197,9 +185,7 @@
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
     }
 
-    /* ================================================== */
-    /* === HEADER / NAVEGACIÓN === */
-    /* ================================================== */
+    /* HEADER */
     .header {
       position: sticky;
       top: 0;
@@ -258,9 +244,7 @@
       transform: translateY(-1px);
     }
 
-    /* ================================================== */
-    /* === HERO === */
-    /* ================================================== */
+    /* HERO */
     .hero {
       position: relative;
       overflow: hidden;
@@ -356,6 +340,7 @@
       border-radius: 24px;
       position: relative;
       overflow: hidden;
+      display: block;
     }
 
     .hero-card::before {
@@ -412,9 +397,7 @@
       font-size: 0.96rem;
     }
 
-    /* ================================================== */
-    /* === PROBLEMA === */
-    /* ================================================== */
+    /* PROBLEMA */
     .problema {
       padding: 84px 0;
       background-color: var(--color-fondo-secundario);
@@ -445,9 +428,7 @@
       font-size: 0.97rem;
     }
 
-    /* ================================================== */
-    /* === SECTORES === */
-    /* ================================================== */
+    /* SECTORES */
     .sectores {
       padding: 84px 0;
       background-color: var(--color-fondo-principal);
@@ -478,13 +459,10 @@
       font-size: 0.97rem;
     }
 
-    /* ================================================== */
-    /* === EJEMPLOS / CARRUSEL 3D === */
-    /* ================================================== */
+    /* EJEMPLOS */
     .ejemplos {
       padding: 84px 0;
-      background:
-        linear-gradient(180deg, #ffffff 0%, #f7f9fd 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #f7f9fd 100%);
       overflow: hidden;
     }
 
@@ -550,31 +528,6 @@
       background: #fff;
     }
 
-    .carousel-card::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0 0;
-      height: 28%;
-      background: linear-gradient(to top, rgba(15,23,42,.78), rgba(15,23,42,0));
-      pointer-events: none;
-    }
-
-    .card-label {
-      position: absolute;
-      left: 14px;
-      bottom: 14px;
-      z-index: 2;
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.92);
-      color: var(--color-texto-oscuro);
-      font-size: 0.88rem;
-      font-weight: 700;
-      box-shadow: 0 8px 20px rgba(0,0,0,.10);
-    }
-
     .carousel-card.active {
       box-shadow: 0 34px 70px rgba(15, 23, 42, 0.28);
     }
@@ -633,9 +586,7 @@
       transform: scale(1.15);
     }
 
-    /* ================================================== */
-    /* === QUÉ INCLUYE === */
-    /* ================================================== */
+    /* INCLUYE */
     .incluye {
       padding: 84px 0;
       background-color: var(--color-fondo-secundario);
@@ -666,9 +617,7 @@
       font-size: 0.97rem;
     }
 
-    /* ================================================== */
-    /* === CÓMO FUNCIONA === */
-    /* ================================================== */
+    /* COMO FUNCIONA */
     .como-funciona {
       padding: 84px 0;
       background-color: var(--color-fondo-principal);
@@ -713,9 +662,7 @@
       font-size: 0.97rem;
     }
 
-    /* ================================================== */
-    /* === PLANES === */
-    /* ================================================== */
+    /* PLANES */
     .planes {
       padding: 84px 0;
       background-color: var(--color-fondo-secundario);
@@ -850,9 +797,7 @@
       box-shadow: 0 10px 24px rgba(11, 18, 32, 0.16);
     }
 
-    /* ================================================== */
-    /* === CTA === */
-    /* ================================================== */
+    /* CTA */
     .cta {
       padding: 86px 0;
       background:
@@ -881,9 +826,7 @@
       margin-bottom: 24px;
     }
 
-    /* ================================================== */
-    /* === CONTACTO === */
-    /* ================================================== */
+    /* CONTACTO */
     .contacto {
       padding: 84px 0;
       background-color: var(--color-fondo-principal);
@@ -946,9 +889,7 @@
       width: 100%;
     }
 
-    /* ================================================== */
-    /* === FOOTER === */
-    /* ================================================== */
+    /* FOOTER */
     .footer {
       background-color: var(--color-fondo-oscuro);
       color: var(--color-texto-blanco);
@@ -990,9 +931,7 @@
       color: var(--color-texto-blanco);
     }
 
-    /* ================================================== */
-    /* === RESPONSIVE === */
-    /* ================================================== */
+    /* RESPONSIVE */
     @media (max-width: 1000px) {
       .hero-container,
       .contacto-container {
@@ -1021,141 +960,28 @@
       }
     }
 
-@media (max-width: 760px) {
-  .header-container {
-    min-height: auto;
-    padding: 14px 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
+    @media (max-width: 760px) {
+      .header-container {
+        min-height: auto;
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
 
-  .nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-  }
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
 
-  .nav a {
-    font-size: 0.92rem;
-  }
+      .nav a {
+        font-size: 0.92rem;
+      }
 
-  .header-cta {
-    display: none;
-  }
-
-  .section-title h2,
-  .ejemplos-header h2,
-  .contacto-text h2,
-  .cta h2 {
-    font-size: 1.82rem;
-  }
-
-  .hero {
-    padding: 72px 0 54px;
-    background:
-      linear-gradient(180deg,
-        rgba(246, 248, 251, 0.84) 0%,
-        rgba(246, 248, 251, 0.72) 20%,
-        rgba(246, 248, 251, 0.56) 40%,
-        rgba(246, 248, 251, 0.38) 60%,
-        rgba(246, 248, 251, 0.22) 78%,
-        rgba(246, 248, 251, 0.10) 90%,
-        rgba(246, 248, 251, 0.02) 100%
-      ),
-      url("hero-bg.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-
-  .hero h1 {
-    font-size: 2.14rem;
-    letter-spacing: -1px;
-  }
-
-  .hero-description {
-    max-width: 100%;
-  }
-
-  .hero-features {
-    gap: 10px;
-  }
-
-  .hero-features li {
-    font-size: 0.88rem;
-  }
-
-  .hero-card {
-    display: none;
-  }
-
-  .problema-grid,
-  .incluye-grid,
-  .steps-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .sectores-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .planes-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .plan-card {
-    padding: 18px;
-    border-radius: 18px;
-  }
-
-  .plan-card.featured {
-    transform: translateY(-2px);
-  }
-
-  .plan-card.featured::after {
-    top: 10px;
-    right: 10px;
-    font-size: 0.62rem;
-    padding: 5px 8px;
-  }
-
-  .plan-card h3 {
-    font-size: 1.6rem;
-  }
-
-  .carousel-3d {
-    padding: 10px 0 0;
-  }
-
-  .carousel-btn {
-    display: none;
-  }
-
-  .carousel-track {
-    height: 500px;
-  }
-
-  .carousel-card {
-    width: 180px;
-  }
-
-  .footer-container {
-    flex-direction: column;
-  }
-
-  .problema,
-  .sectores,
-  .ejemplos,
-  .incluye,
-  .como-funciona,
-  .planes,
-  .cta,
-  .contacto {
-    padding: 62px 0;
-  }
-}
+      .header-cta {
+        display: none;
+      }
 
       .section-title h2,
       .ejemplos-header h2,
@@ -1178,8 +1004,8 @@
           ),
           url("hero-bg.png");
         background-repeat: no-repeat;
-        background-position: center top;
-        background-size: 145%;
+        background-position: center center;
+        background-size: cover;
       }
 
       .hero h1 {
@@ -1273,9 +1099,6 @@
 </head>
 <body>
 
-  <!-- ================================================== -->
-  <!-- === HEADER === -->
-  <!-- ================================================== -->
   <header class="header">
     <div class="container header-container">
       <a href="index.html" class="logo">Presencia<span>DeNegocio</span></a>
@@ -1286,18 +1109,13 @@
         <a href="contacta.html">Contacta</a>
       </nav>
 
-    <a href="#contacto" class="btn btn-secondary">Solicitar información</a>
+      <a href="#contacto" class="btn header-cta">Solicitar información</a>
     </div>
   </header>
 
   <main>
-
-    <!-- ================================================== -->
-    <!-- === HERO === -->
-    <!-- ================================================== -->
     <section class="hero" id="inicio">
       <div class="container hero-container">
-
         <div class="hero-text">
           <p class="hero-tag">Para negocios sin web o con una web desactualizada</p>
 
@@ -1311,7 +1129,7 @@
 
           <div class="hero-buttons">
             <a href="#planes" class="btn btn-primary">Ver planes</a>
-         <a href="#contacto" class="btn btn-secondary">Solicitar información</a>
+            <a href="#contacto" class="btn btn-secondary">Solicitar información</a>
           </div>
 
           <ul class="hero-features">
@@ -1338,13 +1156,9 @@
             </ul>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ================================================== -->
-    <!-- === PROBLEMA === -->
-    <!-- ================================================== -->
     <section class="problema">
       <div class="container">
         <div class="section-title">
@@ -1374,9 +1188,6 @@
       </div>
     </section>
 
-    <!-- ================================================== -->
-    <!-- === SECTORES === -->
-    <!-- ================================================== -->
     <section class="sectores" id="sectores">
       <div class="container">
         <div class="section-title">
@@ -1422,9 +1233,6 @@
       </div>
     </section>
 
-    <!-- ================================================== -->
-    <!-- === EJEMPLOS DE WEBS === -->
-    <!-- ================================================== -->
     <section class="ejemplos" id="ejemplos">
       <div class="container">
         <div class="ejemplos-header">
@@ -1440,35 +1248,35 @@
           <button class="carousel-btn prev" type="button" aria-label="Ver ejemplo anterior">‹</button>
 
           <div class="carousel-track">
-            <article class="carousel-card active" data-label="Dentista">
+            <article class="carousel-card active">
               <img src="Dentista.png" alt="Ejemplo de web profesional para dentista" loading="lazy" />
             </article>
 
-            <article class="carousel-card" data-label="Nutrición">
+            <article class="carousel-card">
               <img src="Nutricionista-1.png" alt="Ejemplo de web profesional para nutricionista" loading="lazy" />
             </article>
 
-            <article class="carousel-card" data-label="Lashista">
+            <article class="carousel-card">
               <img src="Lashista.png" alt="Ejemplo de web profesional para lashista" loading="lazy" />
             </article>
 
-            <article class="carousel-card" data-label="Pádel">
+            <article class="carousel-card">
               <img src="Padel.png" alt="Ejemplo de web profesional para club de pádel" loading="lazy" />
             </article>
 
-            <article class="carousel-card" data-label="Nutrición 2">
+            <article class="carousel-card">
               <img src="Nutricionista-2.png" alt="Segundo ejemplo de web profesional para nutrición" loading="lazy" />
             </article>
 
-            <article class="carousel-card" data-label="Fontanero">
+            <article class="carousel-card">
               <img src="Fontanero.png" alt="Ejemplo de web profesional para fontanero" loading="lazy" />
             </article>
 
-            <article class="carousel-card" data-label="Reiki">
+            <article class="carousel-card">
               <img src="Reiki.png" alt="Ejemplo de web profesional para reiki" loading="lazy" />
             </article>
 
-            <article class="carousel-card" data-label="Jardinería">
+            <article class="carousel-card">
               <img src="Jardineria.png" alt="Ejemplo de web profesional para jardinería" loading="lazy" />
             </article>
           </div>
@@ -1480,9 +1288,6 @@
       </div>
     </section>
 
-    <!-- ================================================== -->
-    <!-- === QUÉ INCLUYE === -->
-    <!-- ================================================== -->
     <section class="incluye">
       <div class="container">
         <div class="section-title">
@@ -1528,9 +1333,6 @@
       </div>
     </section>
 
-    <!-- ================================================== -->
-    <!-- === CÓMO FUNCIONA === -->
-    <!-- ================================================== -->
     <section class="como-funciona">
       <div class="container">
         <div class="section-title">
@@ -1569,9 +1371,6 @@
       </div>
     </section>
 
-    <!-- ================================================== -->
-    <!-- === PLANES === -->
-    <!-- ================================================== -->
     <section class="planes" id="planes">
       <div class="container">
         <div class="section-title">
@@ -1583,7 +1382,6 @@
         </div>
 
         <div class="planes-grid">
-
           <div class="plan-card">
             <p class="plan-name">Basic</p>
             <p class="old-price">Antes 1.999€</p>
@@ -1599,7 +1397,7 @@
               <li>Web lista en 30 días</li>
               <li>Soporte vía email</li>
             </ul>
-            <a href="contacta.html" class="btn btn-plan">Solicitar</a>
+            <a href="#contacto" class="btn btn-plan">Solicitar</a>
           </div>
 
           <div class="plan-card featured">
@@ -1617,7 +1415,7 @@
               <li>Web lista en 20 días</li>
               <li>Soporte vía WhatsApp</li>
             </ul>
-            <a href="contacta.html" class="btn btn-plan">Solicitar</a>
+            <a href="#contacto" class="btn btn-plan">Solicitar</a>
           </div>
 
           <div class="plan-card">
@@ -1635,32 +1433,24 @@
               <li>Web lista en 10 días</li>
               <li>Soporte vía WhatsApp preferente</li>
             </ul>
-            <a href="contacta.html" class="btn btn-plan">Solicitar</a>
+            <a href="#contacto" class="btn btn-plan">Solicitar</a>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ================================================== -->
-    <!-- === CTA === -->
-    <!-- ================================================== -->
     <section class="cta">
       <div class="container cta-container">
         <h2>Si tu negocio no tiene una buena web, estás perdiendo oportunidades</h2>
         <p>
           No necesitas algo complicado. Necesitas algo claro, profesional y listo para funcionar.
         </p>
-        <a href="#contacto" class="btn">Solicitar información</a>
+        <a href="#contacto" class="btn btn-primary">Solicitar información</a>
       </div>
     </section>
 
-    <!-- ================================================== -->
-    <!-- === CONTACTO === -->
-    <!-- ================================================== -->
     <section class="contacto" id="contacto">
       <div class="container contacto-container">
-
         <div class="contacto-text">
           <p class="section-tag">Contacto</p>
           <h2>Te explicamos todo sin compromiso</h2>
@@ -1676,15 +1466,10 @@
           <textarea placeholder="¿Qué necesitas?"></textarea>
           <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
-
       </div>
     </section>
-
   </main>
 
-  <!-- ================================================== -->
-  <!-- === FOOTER === -->
-  <!-- ================================================== -->
   <footer class="footer">
     <div class="container footer-container">
       <div>
@@ -1767,7 +1552,6 @@
           card.style.opacity = opacity;
           card.style.filter = `blur(${blur}px) saturate(${abs === 0 ? 1 : 0.92})`;
           card.style.zIndex = zIndex;
-
           card.classList.toggle('active', index === activeIndex);
         });
 
@@ -1810,13 +1594,11 @@
       track.addEventListener('touchend', (e) => {
         touchEndX = e.changedTouches[0].clientX;
         const distance = touchEndX - touchStartX;
-
         if (distance > 40) prevCard();
         if (distance < -40) nextCard();
       }, { passive: true });
 
       window.addEventListener('resize', renderCarousel);
-
       renderCarousel();
     })();
   </script>
