@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Mensaje enviado | Presencia de Negocio</title>
+
+  <!-- REDIRECCIÓN AUTOMÁTICA -->
+  <meta http-equiv="refresh" content="10;url=index.html">
+
+  <style>
+    :root {
+      --color-fondo: #ffffff;
+      --color-azul: #2563eb;
+      --color-lila: #7c3aed;
+      --color-texto: #111827;
+      --color-secundario: #4b5563;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.08), transparent 28%),
+        var(--color-fondo);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: var(--color-texto);
+    }
+
+    .card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 24px;
+      text-align: center;
+      max-width: 520px;
+      width: 90%;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-azul), var(--color-lila));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 30px;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--color-secundario);
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .contador {
+      font-weight: bold;
+      color: var(--color-azul);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--color-azul), var(--color-lila));
+      color: white;
+      text-decoration: none;
+      transition: 0.25s ease;
+      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.2);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="icon">✓</div>
+
+    <h1>Mensaje enviado correctamente</h1>
+
+    <p>
+      Hemos recibido tu mensaje. Te responderemos lo antes posible.
+    </p>
+
+    <p>
+      Serás redirigido al inicio en 
+      <span class="contador" id="contador">10</span> segundos...
+    </p>
+
+    <a href="index.html" class="btn">Volver ahora</a>
+  </div>
+
+  <script>
+    let segundos = 10;
+    const contador = document.getElementById("contador");
+
+    setInterval(() => {
+      segundos--;
+      if (segundos >= 0) {
+        contador.textContent = segundos;
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
