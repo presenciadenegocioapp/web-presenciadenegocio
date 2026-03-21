@@ -78,6 +78,10 @@
       line-height: 1.6;
     }
 
+    body.modal-open {
+      overflow: hidden;
+    }
+
     a {
       text-decoration: none;
       color: inherit;
@@ -584,13 +588,106 @@
       gap: 16px;
     }
 
-    .footer-links a {
+    .footer-links button {
       color: var(--color-texto-claro);
       font-size: 0.95rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      padding: 0;
     }
 
-    .footer-links a:hover {
+    .footer-links button:hover {
       color: var(--color-texto-blanco);
+    }
+
+    /* MODAL */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 18, 32, 0.58);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 5000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-box {
+      width: min(860px, 100%);
+      max-height: 88vh;
+      overflow-y: auto;
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 25px 70px rgba(15, 23, 42, 0.28);
+      position: relative;
+      padding: 34px 28px 28px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(15, 23, 42, 0.06);
+      color: var(--color-texto-oscuro);
+      font-size: 1.45rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .modal-close:hover {
+      background: rgba(15, 23, 42, 0.12);
+      transform: scale(1.04);
+    }
+
+    .modal-content h2 {
+      font-size: 2rem;
+      line-height: 1.1;
+      margin-bottom: 18px;
+      color: var(--color-texto-oscuro);
+      padding-right: 52px;
+    }
+
+    .modal-content h3 {
+      font-size: 1.25rem;
+      margin: 26px 0 12px;
+      color: var(--color-texto-oscuro);
+    }
+
+    .modal-content p {
+      color: var(--color-texto-secundario);
+      margin-bottom: 14px;
+      font-size: 0.98rem;
+    }
+
+    .modal-content ul {
+      list-style: disc;
+      padding-left: 22px;
+      margin-bottom: 16px;
+    }
+
+    .modal-content ul li {
+      color: var(--color-texto-secundario);
+      margin-bottom: 8px;
+    }
+
+    .modal-divider {
+      height: 1px;
+      background: var(--color-fondo-borde-suave);
+      margin: 24px 0;
     }
 
     @media (max-width: 980px) {
@@ -635,7 +732,8 @@
       .contact-info-card h2,
       .contact-form-card h2,
       .section-title h2,
-      .cta h2 {
+      .cta h2,
+      .modal-content h2 {
         font-size: 1.92rem;
       }
 
@@ -655,6 +753,11 @@
 
       .visual-grid {
         grid-template-columns: 1fr;
+      }
+
+      .modal-box {
+        padding: 28px 18px 22px;
+        border-radius: 18px;
       }
 
       .contact-section,
@@ -872,11 +975,75 @@
       </div>
 
       <div class="footer-links">
-        <a href="#">Aviso legal</a>
-        <a href="#">Privacidad</a>
+        <button type="button" id="openLegalModal">Aviso legal y privacidad</button>
       </div>
     </div>
   </footer>
+
+  <div class="modal-overlay" id="legalModal" aria-hidden="true">
+    <div
+      class="modal-box"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="legalModalTitle"
+    >
+      <button class="modal-close" id="closeLegalModal" aria-label="Cerrar ventana">×</button>
+
+      <div class="modal-content">
+        <h2 id="legalModalTitle">Aviso legal, privacidad y cookies</h2>
+
+        <h3>Condiciones Generales</h3>
+        <p>
+          Presencia de Negocio es un sitio web informativo destinado a mostrar servicios de creación de páginas web para negocios.
+        </p>
+        <p>
+          La información publicada en esta web tiene carácter informativo y no constituye por sí sola una contratación directa del servicio.
+        </p>
+        <p>
+          La contratación, condiciones económicas, forma de pago y demás condiciones se informarán al interesado antes de formalizar cualquier servicio.
+        </p>
+
+        <ul>
+          <li>La contratación no se realiza automáticamente desde esta web.</li>
+          <li>Los servicios se ofrecen tras contacto previo con el interesado.</li>
+          <li>Los pagos podrán gestionarse a través de plataformas externas como Hotmart.</li>
+          <li>Las condiciones de cancelación y reembolso se comunicarán antes de la contratación.</li>
+          <li>Está prohibida la copia, reproducción o uso del contenido de esta web sin autorización expresa.</li>
+          <li>El usuario se compromete a hacer un uso adecuado del sitio web conforme a la ley y la buena fe.</li>
+        </ul>
+
+        <div class="modal-divider"></div>
+
+        <h3>Política de Privacidad</h3>
+        <p><strong>Responsable del tratamiento:</strong></p>
+        <p>
+          Innovative Education Group LLC<br>
+          412 W 7th St, Clovis, NM, 88101, Estados Unidos<br>
+          Email: aquí va tu email
+        </p>
+
+        <ul>
+          <li><strong>Finalidad:</strong> gestionar solicitudes de contacto y consultas realizadas por el usuario.</li>
+          <li><strong>Datos tratados:</strong> nombre, email y cualquier información facilitada en el mensaje.</li>
+          <li><strong>Legitimación:</strong> consentimiento del usuario al enviar el formulario.</li>
+          <li><strong>Destinatarios:</strong> no se cederán datos a terceros salvo obligación legal.</li>
+          <li><strong>Conservación:</strong> los datos se conservarán durante el tiempo necesario para atender la solicitud.</li>
+          <li><strong>Derechos:</strong> acceso, rectificación, supresión, oposición y demás derechos aplicables.</li>
+          <li><strong>Ejercicio de derechos:</strong> mediante el email indicado anteriormente.</li>
+        </ul>
+
+        <div class="modal-divider"></div>
+
+        <h3>Política de Cookies</h3>
+        <p>
+          Este sitio web utiliza únicamente cookies técnicas necesarias para su correcto funcionamiento.
+        </p>
+        <p>
+          No se utilizan cookies de análisis, publicidad ni seguimiento.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <script>
     const contactForm = document.getElementById('contactForm');
@@ -904,6 +1071,39 @@
 
       submitButton.textContent = 'Enviando...';
       submitButton.disabled = true;
+    });
+  </script>
+
+  <script>
+    const legalModal = document.getElementById('legalModal');
+    const openLegalModalBtn = document.getElementById('openLegalModal');
+    const closeLegalModalBtn = document.getElementById('closeLegalModal');
+
+    function openLegalModal() {
+      legalModal.classList.add('active');
+      legalModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+    }
+
+    function closeLegalModal() {
+      legalModal.classList.remove('active');
+      legalModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    }
+
+    openLegalModalBtn.addEventListener('click', openLegalModal);
+    closeLegalModalBtn.addEventListener('click', closeLegalModal);
+
+    legalModal.addEventListener('click', function (e) {
+      if (e.target === legalModal) {
+        closeLegalModal();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && legalModal.classList.contains('active')) {
+        closeLegalModal();
+      }
     });
   </script>
 </body>
