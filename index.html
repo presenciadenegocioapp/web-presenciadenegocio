@@ -997,10 +997,140 @@
     }
 
     @media (max-width: 760px) {
-      .nav,
-      .header-cta {
-        display: none;
-      }
+  .header-container {
+    min-height: auto;
+    padding: 14px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .nav a {
+    font-size: 0.92rem;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .section-title h2,
+  .ejemplos-header h2,
+  .contacto-text h2,
+  .cta h2 {
+    font-size: 1.82rem;
+  }
+
+  .hero {
+    padding: 72px 0 54px;
+    background:
+      linear-gradient(180deg,
+        rgba(246, 248, 251, 0.84) 0%,
+        rgba(246, 248, 251, 0.72) 20%,
+        rgba(246, 248, 251, 0.56) 40%,
+        rgba(246, 248, 251, 0.38) 60%,
+        rgba(246, 248, 251, 0.22) 78%,
+        rgba(246, 248, 251, 0.10) 90%,
+        rgba(246, 248, 251, 0.02) 100%
+      ),
+      url("hero-bg.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 145%;
+  }
+
+  .hero h1 {
+    font-size: 2.14rem;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .hero-features {
+    gap: 10px;
+  }
+
+  .hero-features li {
+    font-size: 0.88rem;
+  }
+
+  .hero-card {
+    display: none;
+  }
+
+  .problema-grid,
+  .incluye-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planes-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .plan-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .plan-card.featured {
+    transform: translateY(-2px);
+  }
+
+  .plan-card.featured::after {
+    top: 10px;
+    right: 10px;
+    font-size: 0.62rem;
+    padding: 5px 8px;
+  }
+
+  .plan-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .carousel-3d {
+    padding: 10px 0 0;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+
+  .carousel-track {
+    height: 500px;
+  }
+
+  .carousel-card {
+    width: 180px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .problema,
+  .sectores,
+  .ejemplos,
+  .incluye,
+  .como-funciona,
+  .planes,
+  .cta,
+  .contacto {
+    padding: 62px 0;
+  }
+}
 
       .section-title h2,
       .ejemplos-header h2,
