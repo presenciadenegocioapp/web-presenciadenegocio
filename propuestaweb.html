@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Propuesta Web | Presencia de Negocio</title>
+  <meta
+    name="description"
+    content="Consulta de forma clara nuestra propuesta web, qué incluye cada opción y cómo trabajamos en Presencia de Negocio."
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Presencia de Negocio" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <link rel="canonical" href="https://presenciadenegocioapp.github.io/propuestaweb/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Presencia de Negocio" />
+  <meta property="og:title" content="Propuesta Web | Presencia de Negocio" />
+  <meta
+    property="og:description"
+    content="Te dejamos aquí una propuesta clara para que puedas ver cómo trabajamos, qué incluye cada opción y los precios."
+  />
+  <meta property="og:url" content="https://presenciadenegocioapp.github.io/propuestaweb/" />
+  <meta property="og:image" content="https://presenciadenegocioapp.github.io/propuestaweb/propuesta.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Propuesta Web | Presencia de Negocio" />
+  <meta
+    name="twitter:description"
+    content="Consulta nuestra propuesta web de forma clara, simple y sin complicaciones."
+  />
+  <meta name="twitter:image" content="https://presenciadenegocioapp.github.io/propuestaweb/propuesta.png" />
+
+  <style>
+    :root {
+      --color-fondo-principal: #ffffff;
+      --color-fondo-secundario: #f6f8fb;
+      --color-fondo-terciario: #eef3ff;
+      --color-fondo-oscuro: #0b1220;
+      --color-fondo-card: rgba(255, 255, 255, 0.92);
+      --color-fondo-destacado: #2563eb;
+      --color-fondo-acento: #7c3aed;
+      --color-fondo-borde-suave: #e5e7eb;
+      --color-fondo-borde-fuerte: #cfd8e3;
+
+      --color-texto-principal: #111827;
+      --color-texto-secundario: #4b5563;
+      --color-texto-suave: #6b7280;
+      --color-texto-claro: #cbd5e1;
+      --color-texto-blanco: #ffffff;
+      --color-texto-destacado: #2563eb;
+      --color-texto-acento: #7c3aed;
+      --color-texto-oscuro: #0b1220;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(124, 58, 237, 0.08), transparent 24%),
+        var(--color-fondo-principal);
+      color: var(--color-texto-principal);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--color-fondo-destacado), var(--color-fondo-acento));
+      color: var(--color-texto-blanco);
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(37, 99, 235, 0.22);
+    }
+
+    .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.88);
+      color: var(--color-texto-principal);
+      border: 1px solid var(--color-fondo-borde-suave);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--color-fondo-principal);
+      transform: translateY(-1px);
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.7);
+    }
+
+    .header-container {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--color-texto-oscuro);
+      white-space: nowrap;
+    }
+
+    .logo span {
+      background: linear-gradient(135deg, var(--color-texto-destacado), var(--color-texto-acento));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      font-size: 0.95rem;
+      color: var(--color-texto-principal);
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: var(--color-texto-destacado);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 88px 0 54px;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.10), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.10), transparent 22%),
+        linear-gradient(180deg, #ffffff 0%, #f7f9fd 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 72% 28%, rgba(37, 99, 235, 0.10), transparent 18%),
+        radial-gradient(circle at 80% 65%, rgba(124, 58, 237, 0.10), transparent 20%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--color-texto-destacado);
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background-color: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.14);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.05;
+      margin-bottom: 18px;
+      color: var(--color-texto-oscuro);
+      letter-spacing: -1.2px;
+    }
+
+    .hero-description {
+      font-size: 1.08rem;
+      color: var(--color-texto-secundario);
+      max-width: 800px;
+      margin: 0 auto 26px;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .hero-trust span {
+      color: var(--color-texto-secundario);
+      font-size: 0.93rem;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background-color: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--color-fondo-borde-suave);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .propuesta-section {
+      padding: 28px 0 84px;
+      background-color: var(--color-fondo-principal);
+    }
+
+    .propuesta-card {
+      background-color: var(--color-fondo-card);
+      border: 1px solid var(--color-fondo-borde-suave);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+      overflow: hidden;
+    }
+
+    .propuesta-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      background: #ffffff;
+    }
+
+    .propuesta-note {
+      max-width: 900px;
+      margin: 22px auto 0;
+      text-align: center;
+      color: var(--color-texto-secundario);
+      font-size: 0.98rem;
+    }
+
+    .cta-final {
+      padding: 0 0 86px;
+      background-color: var(--color-fondo-principal);
+    }
+
+    .cta-final-card {
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.18), transparent 26%),
+        var(--color-fondo-oscuro);
+      color: var(--color-texto-blanco);
+      border-radius: 30px;
+      padding: 48px 30px;
+      text-align: center;
+      box-shadow: 0 24px 60px rgba(11, 18, 32, 0.18);
+    }
+
+    .cta-final-card h2 {
+      font-size: 2.2rem;
+      line-height: 1.12;
+      margin-bottom: 14px;
+      letter-spacing: -0.8px;
+    }
+
+    .cta-final-card p {
+      color: var(--color-texto-claro);
+      font-size: 1rem;
+      max-width: 760px;
+      margin: 0 auto 24px;
+    }
+
+    .footer {
+      background-color: var(--color-fondo-oscuro);
+      color: var(--color-texto-blanco);
+      padding: 34px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .footer-logo {
+      font-size: 1.15rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .footer-text {
+      max-width: 430px;
+      color: var(--color-texto-claro);
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: var(--color-texto-claro);
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-texto-blanco);
+    }
+
+    @media (max-width: 760px) {
+      .header-container {
+        min-height: auto;
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 72px 0 42px;
+      }
+
+      .hero h1,
+      .cta-final-card h2 {
+        font-size: 1.95rem;
+      }
+
+      .propuesta-card {
+        padding: 14px;
+        border-radius: 18px;
+      }
+
+      .propuesta-card img {
+        border-radius: 12px;
+      }
+
+      .cta-final-card {
+        border-radius: 20px;
+        padding: 34px 20px;
+      }
+
+      .footer-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo">Presencia<span>DeNegocio</span></a>
+
+      <nav class="nav">
+        <a href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/index.html" target="_blank" rel="noopener noreferrer">Ir a la web</a>
+        <a href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/contacta.html" target="_blank" rel="noopener noreferrer">Contactar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-container">
+        <p class="hero-tag">Propuesta web</p>
+
+        <h1>Una propuesta clara, profesional y sin complicaciones</h1>
+
+        <p class="hero-description">
+          Te dejamos aquí un resumen visual para que puedas ver de forma rápida cómo trabajamos, qué incluye cada opción y qué plan puede encajar mejor con tu negocio. Si tienes cualquier duda, podemos explicártelo todo de forma clara y sin compromiso.
+        </p>
+
+        <div class="hero-trust">
+          <span>Sin compromiso</span>
+          <span>Sin costes ocultos</span>
+          <span>Explicación clara</span>
+          <span>Enfoque para negocios reales</span>
+        </div>
+
+        <div class="hero-buttons">
+          <a
+            href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/contacta.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Hablar sobre mi caso
+          </a>
+
+          <a
+            href="#propuesta"
+            class="btn btn-secondary"
+          >
+            Ver propuesta
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="propuesta-section" id="propuesta">
+      <div class="container">
+        <div class="propuesta-card">
+          <img
+            src="propuesta.png"
+            alt="Propuesta web con planes de mantenimiento y pago inicial de Presencia de Negocio"
+          />
+        </div>
+
+        <p class="propuesta-note">
+          Esta propuesta sirve como referencia general. Si tu caso requiere algo concreto, podemos orientarte y decirte qué opción encaja mejor contigo.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta-final">
+      <div class="container">
+        <div class="cta-final-card">
+          <h2>Si te encaja la idea, te ayudamos a dar el siguiente paso</h2>
+          <p>
+            Si quieres una web clara, profesional y pensada para transmitir confianza, escríbenos y vemos tu caso sin compromiso.
+          </p>
+
+          <div class="hero-buttons">
+            <a
+              href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/contacta.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+            >
+              Solicitar información
+            </a>
+
+            <a
+              href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+            >
+              Ver web principal
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <p class="footer-logo">PresenciaDeNegocio</p>
+        <p class="footer-text">
+          Webs simples, claras y profesionales para negocios locales.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/index.html" target="_blank" rel="noopener noreferrer">Inicio</a>
+        <a href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/sobre-nosotros.html" target="_blank" rel="noopener noreferrer">Sobre nosotros</a>
+        <a href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/contacta.html" target="_blank" rel="noopener noreferrer">Contacta</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
