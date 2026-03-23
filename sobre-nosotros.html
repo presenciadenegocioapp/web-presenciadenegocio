@@ -13,8 +13,8 @@
   <meta name="author" content="Presencia de Negocio" />
   <meta name="theme-color" content="#2563eb" />
   <link rel="icon" href="favicon.png" sizes="32x32">
-<link rel="icon" href="favicon.png" sizes="16x16">
-<link rel="apple-touch-icon" href="favicon.png">
+  <link rel="icon" href="favicon.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="favicon.png">
 
   <link rel="canonical" href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/sobre-nosotros.html" />
 
@@ -190,6 +190,9 @@
       font-weight: 900;
       color: var(--color-texto-oscuro);
       white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .logo span {
@@ -197,6 +200,12 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+
+    .logo-icon {
+      height: 36px;
+      width: auto;
+      flex-shrink: 0;
     }
 
     .nav {
@@ -750,6 +759,10 @@
         display: none;
       }
 
+      .logo-icon {
+        height: 30px;
+      }
+
       .hero {
         padding: 72px 0 54px;
       }
@@ -810,7 +823,10 @@
 
   <header class="header">
     <div class="container header-container">
-      <a href="index.html" class="logo">Presencia<span>DeNegocio</span></a>
+      <a href="index.html" class="logo">
+        Presencia<span>DeNegocio</span>
+        <img src="logo-basico.png" alt="Logo Presencia de Negocio" class="logo-icon">
+      </a>
 
       <nav class="nav">
         <a href="index.html">Inicio</a>
@@ -833,10 +849,10 @@
           </h1>
 
           <p class="hero-description">
-  Nacimos con una idea muy simple: hoy en día tener web debería ser algo accesible para cualquier negocio que quiera transmitir confianza, explicar bien lo que hace y facilitar el contacto con sus clientes.
+            Nacimos con una idea muy simple: hoy en día tener web debería ser algo accesible para cualquier negocio que quiera transmitir confianza, explicar bien lo que hace y facilitar el contacto con sus clientes.
 
-  No buscamos complicarte ni venderte cosas que no necesitas. Solo queremos que tengas una web profesional, clara y útil que realmente aporte valor a tu negocio.
-</p>
+            No buscamos complicarte ni venderte cosas que no necesitas. Solo queremos que tengas una web profesional, clara y útil que realmente aporte valor a tu negocio.
+          </p>
 
           <div class="hero-buttons">
             <a href="contacta.html" class="btn btn-primary">Contacta con nosotros</a>
