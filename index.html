@@ -215,12 +215,16 @@
       font-weight: 900;
       color: var(--color-texto-oscuro);
       white-space: nowrap;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 8px;
     }
 
-    .logo span {
+    .logo-text {
+      display: inline-block;
+    }
+
+    .logo-text span {
       background: linear-gradient(135deg, var(--color-texto-destacado), var(--color-texto-acento));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -1221,7 +1225,7 @@
 
   <header class="header">
     <div class="container header-container">
-      <a href="index.html" class="logo">Presencia<span>DeNegocio</span><img src="logo-basico.png" alt="Logo Presencia de Negocio" class="logo-icon"></a>
+      <a href="index.html" class="logo"><span class="logo-text">Presencia<span>DeNegocio</span></span><img src="logo-basico.png" alt="Logo Presencia de Negocio" class="logo-icon"></a>
 
       <nav class="nav">
         <a href="index.html">Inicio</a>
