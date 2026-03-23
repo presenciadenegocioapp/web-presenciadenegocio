@@ -17,8 +17,8 @@
   <meta name="author" content="Presencia de Negocio" />
   <meta name="theme-color" content="#2563eb" />
   <link rel="icon" href="favicon.png" sizes="32x32">
-<link rel="icon" href="favicon.png" sizes="16x16">
-<link rel="apple-touch-icon" href="favicon.png">
+  <link rel="icon" href="favicon.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="favicon.png">
   <link rel="canonical" href="https://presenciadenegocioapp.github.io/web-presenciadenegocio/" />
 
   <meta property="og:type" content="website" />
@@ -215,6 +215,9 @@
       font-weight: 900;
       color: var(--color-texto-oscuro);
       white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .logo span {
@@ -222,6 +225,12 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+
+    .logo-icon {
+      height: 26px;
+      width: auto;
+      flex-shrink: 0;
     }
 
     .nav {
@@ -1085,6 +1094,10 @@
         display: none;
       }
 
+      .logo-icon {
+        height: 20px;
+      }
+
       .section-title h2,
       .ejemplos-header h2,
       .contacto-text h2,
@@ -1208,7 +1221,10 @@
 
   <header class="header">
     <div class="container header-container">
-      <a href="index.html" class="logo">Presencia<span>DeNegocio</span></a>
+      <a href="index.html" class="logo">
+        Presencia<span>DeNegocio</span>
+        <img src="logo-basico.png" alt="Logo Presencia de Negocio" class="logo-icon">
+      </a>
 
       <nav class="nav">
         <a href="index.html">Inicio</a>
